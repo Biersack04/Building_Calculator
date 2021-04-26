@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainMenuActivity"
+    android:id="@+id/container">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/down_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/down_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calculator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="56dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="56dp"
+        android:shadowDx="2"
+        android:shadowDy="5"
+        android:text="@string/calculator"
+        android:textColor="@color/black"
+        android:onClick="calculator"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="10dp"
+        app:elevation="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_center"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left_min"
+        app:layout_constraintTop_toTopOf="@+id/top"
+        app:strokeColor="@color/box_stroke"
+        app:strokeWidth="4dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calculation_of_works"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="56dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="56dp"
+        android:text="@string/calculation_of_works"
+        android:textColor="@color/black"
+        android:onClick="calculation_of_works"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="10dp"
+        app:elevation="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/right_min"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/vertical_center"
+        app:layout_constraintTop_toTopOf="@+id/top"
+        app:strokeColor="@color/box_stroke"
+        app:strokeWidth="4dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calculation_of_materials"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:lines="2"
+        android:paddingLeft="24dp"
+        android:paddingTop="56dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="56dp"
+        android:soundEffectsEnabled="false"
+        android:text="@string/calculation_of_materials"
+        android:onClick="calculation_of_materials"
+        android:textColor="@color/black"
+        android:textIsSelectable="false"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="10dp"
+        app:elevation="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/down_percent"
+        app:layout_constraintEnd_toStartOf="@+id/right_center"
+        app:layout_constraintStart_toStartOf="@+id/left_center"
+        app:layout_constraintTop_toBottomOf="@+id/calculator"
+        app:strokeColor="@color/box_stroke"
+        app:strokeWidth="4dp" />
+
+    <ImageView
+        android:id="@+id/image_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/menu"
+        app:layout_constraintBottom_toTopOf="@+id/down_image"
+        app:layout_constraintEnd_toStartOf="@+id/left_center"
+        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintTop_toTopOf="@+id/down_percent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/image_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:onClick="profile"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toTopOf="@+id/down_image"
+        app:layout_constraintEnd_toStartOf="@+id/right"
+        app:layout_constraintStart_toStartOf="@+id/right_center"
+        app:layout_constraintTop_toTopOf="@+id/down_percent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/image_project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/home"
+        app:layout_constraintBottom_toTopOf="@+id/down_image"
+        app:layout_constraintEnd_toStartOf="@+id/right_center"
+        app:layout_constraintStart_toStartOf="@+id/left_center"
+        app:layout_constraintTop_toTopOf="@+id/down_percent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu"
+        android:textColor="@color/light_gray"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/down"
+        app:layout_constraintEnd_toStartOf="@+id/left_center"
+        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintTop_toTopOf="@+id/down_image" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="profile"
+        android:text="@string/profile"
+        android:textColor="@color/light_gray"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/down"
+        app:layout_constraintEnd_toStartOf="@+id/right"
+        app:layout_constraintStart_toStartOf="@+id/right_center"
+        app:layout_constraintTop_toTopOf="@+id/down_image" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_project"
+        android:textColor="@color/light_gray"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:onClick="myProject"
+        app:layout_constraintBottom_toTopOf="@+id/down"
+        app:layout_constraintEnd_toStartOf="@+id/right_center"
+        app:layout_constraintStart_toStartOf="@+id/left_center"
+        app:layout_constraintTop_toTopOf="@+id/down_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

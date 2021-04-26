@@ -1,3 +1,75 @@
 <resources>
     <string name="app_name">Building Calculator</string>
+    <string name="loadingText">Добро пожаловать!</string>
+    <string name="roboto_medium">fonts/robotoMedium.ttf</string>
+    <string name="roboto_regular">fonts/robotoRegular.ttf</string>
+    <string name="roboto_italic">fonts/robotoItalic.ttf</string>
+    <string name="roboto_medium_italic">fonts/robotoMediumItalic.ttf</string>
+    <string name="log_In">Вход</string>
+    <string name="registration">Регистрация</string>
+    <string name="register">Зарегистрироваться</string>
+    <string name="signIn">Войти</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="without_registration">Продолжить без регистрации</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="empty_space"> </string>
+    <string name="role">Роль</string>
+
+    <string-array name="role">
+        <item>Заказчик</item>
+        <item>Исполнитель</item>
+    </string-array>
+
+    <string name="forgot_password_msg">Введите почту, которую указывали при регистрации. Вам придет письмо с дальнейшими инструкциями.</string>
+    <string name="reset_password">Сменить пароль</string>
+    <string name="calculator">Калькулятор</string>
+    <string name="calculation_of_works">Расчет работ</string>
+    <string name="calculation_of_materials">Расчет\nматериалов</string>
+    <string name="calculation_of_materials_one_line">Расчет материалов</string>
+    <string name="menu">Меню</string>
+    <string name="profile">Профиль</string>
+    <string name="my_project">Мои проекты</string>
+    <string name="textView">TextView</string>
+    <string name="personal_data">Персональные данные</string>
+    <string name="surname">Фамилия</string>
+    <string name="name">Имя</string>
+    <string name="patronymic">Отчество</string>
+    <string name="telephone">Телефон</string>
+    <string name="status">Статус</string>
+    <string name="name_of_firm">Название фирмы</string>
+    <string name="address">Адрес</string>
+    <string name="amount_of_workers">Кол-во работников</string>
+    <string name="amount_of_completed_projects">Кол-во выполненых проектов</string>
+    <string name="remarks">Замечания</string>
+    <string name="edit_profile">Редактирование профиля</string>
+
+    <string name="enter_surname">Введите фамилию</string>
+    <string name="enter_name">Введите имя</string>
+    <string name="enter_patronymic">Введите отчество</string>
+    <string name="enter_telephone">Введите телефон</string>
+    <string name="enter_email">Введите email</string>
+    <string name="enter_status">Введите статус</string>
+    <string name="enter_name_of_firm">Введите название фирмы</string>
+    <string name="enter_address">Введите адрес</string>
+    <string name="enter_remarks">Введите замечания…</string>
+    <string name="enter_edit_profile">Редактирование профиля</string>
+    <string name="enter_number_workers">Введите кол-во работников</string>
+    <string name="enter_number_completed_projects">Введите кол-во выполненых проектов</string>
+    <string name="password_change_instruction">На вашу почту отправлена инструкция для смены пароля!</string>
+    <string name="changing_password_error">Ошибка! Проверьте свою почту!</string>
+    <string name="email_error">Please enter your email</string>
+    <string name="password_error">Please enter your password</string>
+    <string name="role_error">Please choose role</string>
+    <string name="error_register">Ошибка регистрации</string>
+    <string name="error_log_in">Ошибка входа! Проверьте почту и пароль!</string>
+    <string name="exit_message">Нажмите еще раз чтобы выйти</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="search_category_of_works">Поиск по категориям работ…</string>
+    <string name="search_category_of_materials">Поиск по категориям материалов…</string>
+    <string name="search_of_works">Поиск работы…</string>
+    <string name="search_of_materials">Поиск материала…</string>
+
+
 </resources>
