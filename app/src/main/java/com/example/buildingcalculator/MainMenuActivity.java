@@ -73,16 +73,16 @@ public class MainMenuActivity extends AppCompatActivity {
 
             set.clone(constraintLayout);
 
-            set.connect(R.id.image_menu, ConstraintSet.END, R.id.vertical_center, ConstraintSet.START);
+            set.connect(R.id.image_menu, ConstraintSet.END, R.id.vertical_center_percent, ConstraintSet.START);
             set.setHorizontalBias(R.id.image_menu, 0.5f);
 
-            set.connect(R.id.menu, ConstraintSet.END, R.id.vertical_center, ConstraintSet.START);
+            set.connect(R.id.menu, ConstraintSet.END, R.id.vertical_center_percent, ConstraintSet.START);
             set.setHorizontalBias(R.id.image_menu, 0.5f);
 
-            set.connect(R.id.image_profile, ConstraintSet.START, R.id.vertical_center, ConstraintSet.END);
+            set.connect(R.id.image_profile, ConstraintSet.START, R.id.vertical_center_percent, ConstraintSet.END);
             set.setHorizontalBias(R.id.image_menu, 0.5f);
 
-            set.connect(R.id.profile, ConstraintSet.START, R.id.vertical_center, ConstraintSet.END);
+            set.connect(R.id.profile, ConstraintSet.START, R.id.vertical_center_percent, ConstraintSet.END);
             set.setHorizontalBias(R.id.image_menu, 0.5f);
 
             set.applyTo(constraintLayout);
@@ -136,9 +136,12 @@ public class MainMenuActivity extends AppCompatActivity {
     }
 
     public void calculation_of_works(View view) {
-
+/*
         intent = new Intent(this, CategoryOfWorksOrMaterials.class);
         intent.putExtra("activity_selection","Works");
+        startActivity(intent);*/
+
+        intent = new Intent(this, CalculationOfWork.class);
         startActivity(intent);
     }
 

@@ -8,13 +8,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class ProfileActivity extends AppCompatActivity {
+    private static final String TAG = "AAAA";
     TextView personalInformation;
-    TextView surname, name, patronymic, email, telephone, status, nameOfFirm, address, numberOfWorkers, additionalField;
+    TextView surname, name, patronymic, email, telephone, status, nameOfFirm, address, numberOfWorkers;
     TextView IntroducedSurname, IntroducedName, IntroducedPatronymic, IntroducedEmail, IntroducedTelephone, IntroducedStatus,
             IntroducedNameOfFirm, IntroducedAddress, IntroducedNumberOfWorkers, IntroducedAdditionalField;
     TextView menu, profile, project;
     Intent intent;
+
+    private FirebaseAuth mAuth;
+// [END declare_auth]
+
+    // [START declare_auth_listener]
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +51,7 @@ public class ProfileActivity extends AppCompatActivity {
         patronymic = findViewById(R.id.patronymic);
         patronymic.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_regular)));
 
-        email = findViewById(R.id.email);
+        email = findViewById(R.id.email_edit_text);
         email.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_regular)));
 
         telephone = findViewById(R.id.telephone);
@@ -59,9 +68,6 @@ public class ProfileActivity extends AppCompatActivity {
 
         numberOfWorkers = findViewById(R.id.number_of_workers);
         numberOfWorkers.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_regular)));
-
-        additionalField = findViewById(R.id.additional_field);
-        additionalField.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_regular)));
 
         IntroducedSurname = findViewById(R.id.personal_surname);
         IntroducedSurname.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_regular)));
@@ -90,9 +96,11 @@ public class ProfileActivity extends AppCompatActivity {
         IntroducedNumberOfWorkers = findViewById(R.id.personal_number_of_workers);
         IntroducedNumberOfWorkers.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_regular)));
 
-        IntroducedAdditionalField = findViewById(R.id.personal_additional_field);
-        IntroducedAdditionalField.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_regular)));
 
+        mAuth = FirebaseAuth.getInstance();
+// [END initialize_auth]
+
+// [START auth_state_listener]
 
     }
 
@@ -107,5 +115,12 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void myProject(View view) {
+    }
+
+    public void signOutProfile(View view) {
+
+        FirebaseAuth.getInstance().signOut();
+        intent = new Intent(this, LogInActivity.class);
+        startActivity(intent);
     }
 }

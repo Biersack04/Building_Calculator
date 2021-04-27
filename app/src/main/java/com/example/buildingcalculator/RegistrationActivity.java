@@ -49,18 +49,18 @@ public class RegistrationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
-        inputEmail = findViewById(R.id.email);
-        inputPassword = findViewById(R.id.password);
+        inputEmail = findViewById(R.id.email_edit_text);
+        inputPassword = findViewById(R.id.password_edit_text);
         progressBar = findViewById(R.id.progressBar);
         roleList = findViewById(R.id.role_input);
         roleItem = findViewById(R.id.role_item);
 
-        role_items = getResources().getStringArray(R.array.role);
+        role_items = getResources().getStringArray(R.array.role_items);
         arrayAdapter_role = new ArrayAdapter<>(getApplicationContext(), R.layout.dropdown_menu_item, role_items);
         roleItem.setAdapter(arrayAdapter_role);
         roleItem.setOnItemClickListener(onItemClickListener);
 
-        logIn = findViewById(R.id.logIn);
+        logIn = findViewById(R.id.logInTextView);
         logIn.setTypeface(Typeface.createFromAsset(getAssets(), getString(R.string.roboto_medium)));
 
         registration = findViewById(R.id.registration);
@@ -69,7 +69,7 @@ public class RegistrationActivity extends AppCompatActivity {
         register = findViewById(R.id.button_register);
         register.setTypeface(Typeface.createFromAsset(getAssets(), getString(R.string.roboto_medium)));
 
-        withoutRegistration = findViewById(R.id.without_registration);
+        withoutRegistration = findViewById(R.id.without_registration_text_view);
         withoutRegistration.setTypeface(Typeface.createFromAsset(getAssets(), getString(R.string.roboto_italic)));
 
         auth = FirebaseAuth.getInstance();

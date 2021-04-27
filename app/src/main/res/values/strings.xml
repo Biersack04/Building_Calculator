@@ -1,10 +1,21 @@
 <resources>
+    <!-- systemic -->
     <string name="app_name">Building Calculator</string>
     <string name="loadingText">Добро пожаловать!</string>
+    <string name="exit_message">Нажмите еще раз чтобы выйти</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="save">Сохранить</string>
+    <string name="delete">Удалить</string>
+    <string name="customer">Заказчик</string>
+
+    <!-- fonts -->
     <string name="roboto_medium">fonts/robotoMedium.ttf</string>
     <string name="roboto_regular">fonts/robotoRegular.ttf</string>
     <string name="roboto_italic">fonts/robotoItalic.ttf</string>
     <string name="roboto_medium_italic">fonts/robotoMediumItalic.ttf</string>
+
+    <!-- registration, signIn, logIn, resetPassword -->
     <string name="log_In">Вход</string>
     <string name="registration">Регистрация</string>
     <string name="register">Зарегистрироваться</string>
@@ -15,22 +26,31 @@
     <string name="password">Password</string>
     <string name="empty_space"> </string>
     <string name="role">Роль</string>
+    <string name="forgot_password_msg">Введите почту, которую указывали при регистрации. Вам придет письмо с дальнейшими инструкциями.</string>
+    <string name="reset_password">Сменить пароль</string>
+    <string name="password_change_instruction">На вашу почту отправлена инструкция для смены пароля!</string>
+    <string name="changing_password_error">Ошибка! Проверьте свою почту!</string>
+    <string name="email_error">Please enter your email</string>
+    <string name="password_error">Please enter your password</string>
+    <string name="role_error">Please choose role</string>
+    <string name="error_register">Ошибка регистрации</string>
+    <string name="error_log_in">Ошибка входа! Проверьте почту и пароль!</string>
 
-    <string-array name="role">
+    <string-array name="role_items">
         <item>Заказчик</item>
         <item>Исполнитель</item>
     </string-array>
 
-    <string name="forgot_password_msg">Введите почту, которую указывали при регистрации. Вам придет письмо с дальнейшими инструкциями.</string>
-    <string name="reset_password">Сменить пароль</string>
+    <!-- main Menu-->
     <string name="calculator">Калькулятор</string>
     <string name="calculation_of_works">Расчет работ</string>
     <string name="calculation_of_materials">Расчет\nматериалов</string>
     <string name="calculation_of_materials_one_line">Расчет материалов</string>
     <string name="menu">Меню</string>
     <string name="profile">Профиль</string>
-    <string name="my_project">Мои проекты</string>
-    <string name="textView">TextView</string>
+    <string name="my_projects">Мои проекты</string>
+
+    <!-- profile-->
     <string name="personal_data">Персональные данные</string>
     <string name="surname">Фамилия</string>
     <string name="name">Имя</string>
@@ -39,11 +59,9 @@
     <string name="status">Статус</string>
     <string name="name_of_firm">Название фирмы</string>
     <string name="address">Адрес</string>
-    <string name="amount_of_workers">Кол-во работников</string>
-    <string name="amount_of_completed_projects">Кол-во выполненых проектов</string>
-    <string name="remarks">Замечания</string>
+    <string name="qty_of_workers">Кол-во работников</string>
+    <string name="qty_of_completed_projects">Кол-во выполненых проектов</string>
     <string name="edit_profile">Редактирование профиля</string>
-
     <string name="enter_surname">Введите фамилию</string>
     <string name="enter_name">Введите имя</string>
     <string name="enter_patronymic">Введите отчество</string>
@@ -51,25 +69,39 @@
     <string name="enter_email">Введите email</string>
     <string name="enter_status">Введите статус</string>
     <string name="enter_name_of_firm">Введите название фирмы</string>
+
+    <string name="enter_title">Введите название</string>
+    <string name="enter_qty">Введите кол-во</string>
+    <string name="enter_price_per_unit">Введите цену за ед.</string>
     <string name="enter_address">Введите адрес</string>
-    <string name="enter_remarks">Введите замечания…</string>
-    <string name="enter_edit_profile">Редактирование профиля</string>
-    <string name="enter_number_workers">Введите кол-во работников</string>
-    <string name="enter_number_completed_projects">Введите кол-во выполненых проектов</string>
-    <string name="password_change_instruction">На вашу почту отправлена инструкция для смены пароля!</string>
-    <string name="changing_password_error">Ошибка! Проверьте свою почту!</string>
-    <string name="email_error">Please enter your email</string>
-    <string name="password_error">Please enter your password</string>
-    <string name="role_error">Please choose role</string>
-    <string name="error_register">Ошибка регистрации</string>
-    <string name="error_log_in">Ошибка входа! Проверьте почту и пароль!</string>
-    <string name="exit_message">Нажмите еще раз чтобы выйти</string>
-    <string name="yes">Да</string>
-    <string name="no">Нет</string>
+    <string name="enter_qty_workers">Введите кол-во работников</string>
+    <string name="enter_qty_completed_projects">Введите кол-во выполненых проектов</string>
+
     <string name="search_category_of_works">Поиск по категориям работ…</string>
     <string name="search_category_of_materials">Поиск по категориям материалов…</string>
     <string name="search_of_works">Поиск работы…</string>
-    <string name="search_of_materials">Поиск материала…</string>
+    <string name="units">Единицы\nизмерения</string>
+    <string name="qty">Кол-во</string>
+    <string name="unit_price">Цена за ед.</string>
+    <string name="title">Название</string>
+    <string name="total_price">Итоговая\nстоимость:</string>
+    <string name="calculating">Рассчитать</string>
+    <string name="save_as">Сохранить как …</string>
+    <string name="add_to_project">Добавить в\nпроект</string>
+    <string name="add_material">материал</string>
+    <string name="sum">Сумма</string>
+    <string name="enter_qty_of_workers">Введите кол-во работников</string>
+    <string name="qty_of_works">Кол-во работ</string>
+    <string name="enter_date_of_create">Введите дату создания</string>
+    <string name="date_of_create">Дата создания</string>
+    <string name="add_work">работа</string>
+    <string name="add_customer">заказчик</string>
+    <string name="add_materials">материалы</string>
+    <string name="customer_identification_number">Введите уникальный номер заказчика</string>
+    <string name="find_customer">Найти заказчика</string>
+    <string name="information_about_project">Информация о проекте</string>
+    <string name="list_of_works">Список работ</string>
+    <string name="list_of_materials">Список материалов</string>
 
 
 </resources>

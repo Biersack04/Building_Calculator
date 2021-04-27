@@ -10,8 +10,12 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.BuildingCalculator">
-        <activity android:name=".AddMaterials"></activity>
-        <activity android:name=".CalculationOfMaterial" />
+        <activity android:name=".AddCustomerActivity"></activity>
+        <activity android:name=".ViewProjectActivity" />
+        <activity android:name=".AddProjectActivity" />
+        <activity android:name=".AddMaterialsActivity" />
+        <activity android:name=".ListOfMaterialsActivity" />
+        <activity android:name=".TotalPriceOfMaterial" />
         <activity android:name=".CalculationOfWork" />
         <activity android:name=".CategoryOfWorksOrMaterials" />
         <activity android:name=".MyProject" />

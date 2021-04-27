@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="loading_text_vew" type="id"> </item>
+    <item name="left_guideline_24dp" type="id"> </item>
+    <item name="right_guideline_24dp" type="id"> </item>
+    <item name="top_guideline_72dp" type="id"> </item>
+    <item name="vertical_center_percent" type="id"> </item>
+    <item name="down_guideline_48dp" type="id"> </item>
+    <item name="down_guideline_percent_7" type="id"> </item>
+    <item name="logInTextView" type="id"> </item>
+    <item name="registrationTextView" type="id"> </item>
+    <item name="log_in_linear_layout" type="id"> </item>
+    <item name="email_layout" type="id"> </item>
+    <item name="email_edit_text" type="id"> </item>
+    <item name="password_layout" type="id"> </item>
+
+    <item name="password_edit_text" type="id"> </item>
+    <item name="button_sign_in" type="id"> </item>
+    <item name="forgot_password_text_view" type="id"> </item>
+    <item name="without_registration_text_view" type="id"> </item>
+    <item name="progress_bar" type="id" />
+
+
+</resources>

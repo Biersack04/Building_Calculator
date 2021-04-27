@@ -32,7 +32,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
         buttonResetPassword = findViewById(R.id.button_reset_password);
         buttonResetPassword.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
-        inputEmail = findViewById(R.id.email);
+        inputEmail = findViewById(R.id.email_edit_text);
 
         auth = FirebaseAuth.getInstance();
     }

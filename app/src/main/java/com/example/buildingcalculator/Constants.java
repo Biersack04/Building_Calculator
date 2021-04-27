@@ -8,4 +8,5 @@ public class Constants {
     public static final String ACTIVITY_SELECTION = "activity_selection";
     public static final String WORKS = "works";
     public static final String MATERIALS = "materials";
+    public static final int SPLASH_DISPLAY_LENGTH = 2000;
 }

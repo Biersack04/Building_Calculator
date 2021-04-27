@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class EditProfileActivity extends AppCompatActivity {
     Intent intent;
     TextView personalInformation;
-    TextView surname, name, patronymic, email, telephone, status, nameOfFirm, address, numberOfWorkers, remarks, numberOfCompletedProjects;
+    TextView surname, name, patronymic, email, telephone, status, nameOfFirm, address, numberOfWorkers, numberOfCompletedProjects;
     TextView menu, profile, project;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,9 +56,6 @@ public class EditProfileActivity extends AppCompatActivity {
 
         numberOfWorkers = findViewById(R.id.edit_number_of_workers);
         numberOfWorkers.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_regular)));
-
-        remarks = findViewById(R.id.edit_remarks);
-        remarks.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_regular)));
 
         numberOfCompletedProjects = findViewById(R.id.enter_number_completed_projects);
         numberOfCompletedProjects.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_regular)));

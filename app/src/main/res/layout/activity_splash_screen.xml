@@ -8,13 +8,13 @@
     tools:context=".SplashScreenActivity">
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/loadingText"
+        android:id="@id/loading_text_vew"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/loadingText"
         android:textColor="@color/white"
-        android:textSize="48sp"
+        android:textSize="@dimen/loading_title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.TextView;
 
+import static com.example.buildingcalculator.Constants.SPLASH_DISPLAY_LENGTH;
+
 public class SplashScreenActivity extends AppCompatActivity {
 
     TextView loadingText;
@@ -16,21 +18,22 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        loadingText = findViewById(R.id.loadingText);
+        loadingText = findViewById(R.id.loading_text_vew);
         loadingText.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
 
-        int SPLASH_DISPLAY_LENGTH = 2000;
         new Handler().postDelayed(() -> {
+
             Intent mainIntent = new Intent(SplashScreenActivity.this, LogInActivity.class);
             SplashScreenActivity.this.startActivity(mainIntent);
             SplashScreenActivity.this.finish();
+
         }, SPLASH_DISPLAY_LENGTH);
     }
 
     @Override
     public void onBackPressed() {
+
         super.onBackPressed();
     }
-
 
 }

@@ -37,23 +37,23 @@ public class LogInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
 
-        logIn = findViewById(R.id.logIn);
+        logIn = findViewById(R.id.logInTextView);
         logIn.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
 
         registration = findViewById(R.id.registration);
         registration.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
 
-        buttonSignIn = findViewById(R.id.button_signIn);
+        buttonSignIn = findViewById(R.id.button_sign_in);
         buttonSignIn.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
 
-        withoutRegistration = findViewById(R.id.without_registration);
+        withoutRegistration = findViewById(R.id.without_registration_text_view);
         withoutRegistration.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_italic)));
 
-        forgotPassword = findViewById(R.id.forgot_password);
+        forgotPassword = findViewById(R.id.forgot_password_text_view);
         forgotPassword.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_italic)));
 
-        inputEmail = findViewById(R.id.email);
-        inputPassword = findViewById(R.id.password);
+        inputEmail = findViewById(R.id.email_edit_text);
+        inputPassword = findViewById(R.id.password_edit_text);
         progressBar = findViewById(R.id.progressBar);
 
         sPref = getSharedPreferences(APP_PREFERENCES_NAME, MODE_PRIVATE);

@@ -8,14 +8,14 @@
     tools:context=".EditProfileActivity">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vertical_center"
+        android:id="@+id/vertical_center_percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/down_percent"
+        android:id="@+id/down_guideline_percent_7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -29,7 +29,7 @@
         app:layout_constraintGuide_percent="0.75" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/top"
+        android:id="@+id/top_guideline_72dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -57,14 +57,14 @@
         app:layout_constraintGuide_end="32dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/left"
+        android:id="@+id/left_guideline_24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="32dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/right"
+        android:id="@+id/right_guideline_24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -78,8 +78,8 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="24dp"
         android:onClick="back"
-        android:src="@drawable/back_arrow"
-        app:layout_constraintBottom_toTopOf="@+id/top"
+        android:src="@drawable/ic_arrow_back_32"
+        app:layout_constraintBottom_toTopOf="@+id/top_guideline_72dp"
         app:layout_constraintEnd_toStartOf="@+id/left_center"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,9 +94,9 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
         android:onClick="saveProfile"
-        android:src="@drawable/save"
-        app:layout_constraintBottom_toTopOf="@+id/top"
-        app:layout_constraintEnd_toStartOf="@+id/right"
+        android:src="@drawable/ic_save_24"
+        app:layout_constraintBottom_toTopOf="@+id/top_guideline_72dp"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/right_center"
         app:layout_constraintTop_toTopOf="parent"
@@ -111,9 +111,9 @@
         android:textColor="@color/light_gray"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left"
-        app:layout_constraintTop_toTopOf="@+id/top" />
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
+        app:layout_constraintTop_toTopOf="@+id/top_guideline_72dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/LoginTextInputLayoutStyle"
@@ -130,8 +130,8 @@
         app:boxStrokeWidth="1dp"
         app:boxStrokeWidthFocused="2dp"
         app:hintTextColor="@color/light_gray"
-        app:layout_constraintEnd_toStartOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
         app:layout_constraintTop_toBottomOf="@+id/personal_information">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -159,8 +159,8 @@
         app:boxStrokeWidth="1dp"
         app:boxStrokeWidthFocused="2dp"
         app:hintTextColor="@color/light_gray"
-        app:layout_constraintEnd_toStartOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
         app:layout_constraintTop_toBottomOf="@+id/surname_layout">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -188,8 +188,8 @@
         app:boxStrokeWidth="1dp"
         app:boxStrokeWidthFocused="2dp"
         app:hintTextColor="@color/light_gray"
-        app:layout_constraintEnd_toStartOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
         app:layout_constraintTop_toBottomOf="@+id/name_layout">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -217,8 +217,8 @@
         app:boxStrokeWidth="1dp"
         app:boxStrokeWidthFocused="2dp"
         app:hintTextColor="@color/light_gray"
-        app:layout_constraintEnd_toStartOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
         app:layout_constraintTop_toBottomOf="@+id/patronymic_layout">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -246,8 +246,8 @@
         app:boxStrokeWidth="1dp"
         app:boxStrokeWidthFocused="2dp"
         app:hintTextColor="@color/light_gray"
-        app:layout_constraintEnd_toStartOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
         app:layout_constraintTop_toBottomOf="@+id/email_layout">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -272,8 +272,8 @@
         app:boxCornerRadiusTopStart="10dp"
         app:boxStrokeWidth="1dp"
         app:endIconTint="@color/light_gray"
-        app:layout_constraintEnd_toStartOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
         app:layout_constraintTop_toBottomOf="@+id/telephone_layout">
 
         <AutoCompleteTextView
@@ -298,8 +298,8 @@
         app:boxStrokeWidth="1dp"
         app:boxStrokeWidthFocused="2dp"
         app:hintTextColor="@color/light_gray"
-        app:layout_constraintEnd_toStartOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
         app:layout_constraintTop_toBottomOf="@+id/status_input">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -327,8 +327,8 @@
         app:boxStrokeWidth="1dp"
         app:boxStrokeWidthFocused="2dp"
         app:hintTextColor="@color/light_gray"
-        app:layout_constraintEnd_toStartOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
         app:layout_constraintTop_toBottomOf="@+id/name_of_firm_layout">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -342,49 +342,16 @@
             android:textColorHint="#FFFFFF" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/remarks_layout"
-        style="@style/LoginTextInputLayoutStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:textColorHint="@color/white"
-        app:boxBackgroundMode="outline"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp"
-        app:boxStrokeWidth="1dp"
-        app:boxStrokeWidthFocused="2dp"
-        app:hintTextColor="@color/light_gray"
-        app:layout_constraintBottom_toTopOf="@+id/down_percent"
-        app:layout_constraintEnd_toStartOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left"
-        app:layout_constraintTop_toBottomOf="@+id/address_layout"
-        app:layout_constraintVertical_bias="0.0">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_remarks"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="top"
-            android:hint="@string/enter_remarks"
-            android:inputType="textMultiLine"
-            android:singleLine="false"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/enter_number_workers"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/enter_number_workers"
+        android:text="@string/enter_qty_workers"
         android:textColor="@color/light_gray"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/right_center"
-        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
         app:layout_constraintTop_toBottomOf="@+id/address_layout" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -392,12 +359,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/enter_number_completed_projects"
+        android:text="@string/enter_qty_completed_projects"
         android:textColor="@color/light_gray"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/down_percent"
+        app:layout_constraintBottom_toTopOf="@+id/down_guideline_percent_7"
         app:layout_constraintEnd_toStartOf="@+id/right_center"
-        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
         app:layout_constraintTop_toBottomOf="@+id/enter_number_workers"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -408,7 +375,7 @@
         android:backgroundTint="@color/light_gray"
         android:ems="10"
         android:inputType="numberSigned"
-        app:layout_constraintEnd_toStartOf="@+id/right"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
         app:layout_constraintStart_toEndOf="@+id/enter_number_completed_projects"
         app:layout_constraintTop_toBottomOf="@+id/address_layout" />
 
@@ -419,8 +386,8 @@
         android:backgroundTint="@color/light_gray"
         android:ems="10"
         android:inputType="numberSigned"
-        app:layout_constraintBottom_toTopOf="@+id/down_percent"
-        app:layout_constraintEnd_toStartOf="@+id/right"
+        app:layout_constraintBottom_toTopOf="@+id/down_guideline_percent_7"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
         app:layout_constraintStart_toEndOf="@+id/enter_number_workers"
         app:layout_constraintTop_toBottomOf="@+id/edit_number_of_completed_projects"
         app:layout_constraintVertical_bias="0.0" />
@@ -432,12 +399,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
-        android:src="@drawable/menu"
+        android:src="@drawable/ic_menu_32"
         android:onClick="menu"
         app:layout_constraintBottom_toTopOf="@+id/down_image"
         app:layout_constraintEnd_toStartOf="@+id/left_center"
-        app:layout_constraintStart_toStartOf="@+id/left"
-        app:layout_constraintTop_toTopOf="@+id/down_percent"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
+        app:layout_constraintTop_toTopOf="@+id/down_guideline_percent_7"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
@@ -446,12 +413,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
-        android:src="@drawable/home"
+        android:src="@drawable/ic_home_32"
         android:onClick="project"
         app:layout_constraintBottom_toTopOf="@+id/down_image"
         app:layout_constraintEnd_toStartOf="@+id/right_center"
         app:layout_constraintStart_toStartOf="@+id/left_center"
-        app:layout_constraintTop_toTopOf="@+id/down_percent"
+        app:layout_constraintTop_toTopOf="@+id/down_guideline_percent_7"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
@@ -460,12 +427,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
-        android:src="@drawable/profile"
+        android:src="@drawable/ic_profile_32"
         app:layout_constraintBottom_toTopOf="@+id/down_image"
-        app:layout_constraintEnd_toStartOf="@+id/right"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/right_center"
-        app:layout_constraintTop_toTopOf="@+id/down_percent"
+        app:layout_constraintTop_toTopOf="@+id/down_guideline_percent_7"
         app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -483,7 +450,7 @@
         android:onClick="menu"
         app:layout_constraintBottom_toTopOf="@+id/down_text"
         app:layout_constraintEnd_toStartOf="@+id/left_center"
-        app:layout_constraintStart_toStartOf="@+id/left"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
         app:layout_constraintTop_toTopOf="@+id/down_image" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -494,7 +461,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="@string/my_project"
+        android:text="@string/my_projects"
         android:textColor="@color/light_gray"
         android:textSize="12sp"
         android:textStyle="bold"
@@ -517,9 +484,8 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/down_text"
-        app:layout_constraintEnd_toStartOf="@+id/right"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
         app:layout_constraintStart_toStartOf="@+id/right_center"
         app:layout_constraintTop_toTopOf="@+id/down_image" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
