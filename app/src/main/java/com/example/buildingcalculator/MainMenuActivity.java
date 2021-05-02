@@ -4,26 +4,26 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import static com.example.buildingcalculator.Constants.APP_PREFERENCES_NAME;
-import static com.example.buildingcalculator.Constants.PREFERENCES_FLAG_REGISTRATION;
+import com.example.buildingcalculator.Authentication.RegistrationActivity;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textview.MaterialTextView;
+
+import static com.example.buildingcalculator.Constants.*;
 
 public class MainMenuActivity extends AppCompatActivity {
 
-    Button calculator, calculatingOfWorks, calculatingOfMaterials;
-    TextView menu, profile, project;
-    ImageView imageViewProject, imageViewProfile, imageViewMenu;
+    MaterialButton calculator, calculatingOfWorks, calculatingOfMaterials;
+    MaterialTextView menu, profile, project;
+    ImageView imageViewProject;
     Intent intent;
     private long backPressedTime;
     private Toast backToast;
@@ -37,29 +37,7 @@ public class MainMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        constraintLayout = findViewById(R.id.container);
-
-        calculator = findViewById(R.id.calculator);
-        calculator.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
-
-        calculatingOfWorks = findViewById(R.id.calculation_of_works);
-        calculatingOfWorks.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
-
-        calculatingOfMaterials = findViewById(R.id.calculation_of_materials);
-        calculatingOfMaterials.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
-
-        menu = findViewById(R.id.menu);
-        menu.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
-
-        project = findViewById(R.id.project);
-        project.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
-
-        profile = findViewById(R.id.profile);
-        profile.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
-
-        imageViewProject = findViewById(R.id.image_project);
-        imageViewProfile = findViewById(R.id.image_profile);
-        imageViewMenu = findViewById(R.id.image_menu);
+        layoutElementsInit();
 
         sPref = getSharedPreferences(APP_PREFERENCES_NAME, MODE_PRIVATE);
 
@@ -67,27 +45,56 @@ public class MainMenuActivity extends AppCompatActivity {
 
         if (flagWithoutRegistration)
         {
-            project.setVisibility(View.INVISIBLE);
-            imageViewProject.setVisibility(View.GONE);
-            ConstraintSet set = new ConstraintSet();
-
-            set.clone(constraintLayout);
-
-            set.connect(R.id.image_menu, ConstraintSet.END, R.id.vertical_center_percent, ConstraintSet.START);
-            set.setHorizontalBias(R.id.image_menu, 0.5f);
-
-            set.connect(R.id.menu, ConstraintSet.END, R.id.vertical_center_percent, ConstraintSet.START);
-            set.setHorizontalBias(R.id.image_menu, 0.5f);
-
-            set.connect(R.id.image_profile, ConstraintSet.START, R.id.vertical_center_percent, ConstraintSet.END);
-            set.setHorizontalBias(R.id.image_menu, 0.5f);
-
-            set.connect(R.id.profile, ConstraintSet.START, R.id.vertical_center_percent, ConstraintSet.END);
-            set.setHorizontalBias(R.id.image_menu, 0.5f);
-
-            set.applyTo(constraintLayout);
+            hideElements();
         }
+    }
 
+    public void layoutElementsInit(){
+
+        constraintLayout = findViewById(R.id.container);
+
+        calculator = findViewById(R.id.calculator_main_menu_layout);
+        calculator.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
+
+        calculatingOfWorks = findViewById(R.id.calculation_of_works_main_menu_layout);
+        calculatingOfWorks.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
+
+        calculatingOfMaterials = findViewById(R.id.calculation_of_materials_main_menu_layout);
+        calculatingOfMaterials.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
+
+        menu = findViewById(R.id.menu_main_menu_layout);
+        menu.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
+
+        project = findViewById(R.id.project_main_menu_layout);
+        project.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
+
+        profile = findViewById(R.id.profile_main_menu_layout);
+        profile.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
+
+        imageViewProject = findViewById(R.id.image_project_main_menu_layout);
+    }
+
+    public void hideElements(){
+
+        project.setVisibility(View.INVISIBLE);
+        imageViewProject.setVisibility(View.GONE);
+        ConstraintSet set = new ConstraintSet();
+
+        set.clone(constraintLayout);
+
+        set.connect(R.id.image_menu_main_menu_layout, ConstraintSet.END, R.id.vertical_center_percent_main_menu_layout, ConstraintSet.START);
+        set.setHorizontalBias(R.id.image_menu_main_menu_layout, 0.5f);
+
+        set.connect(R.id.menu_main_menu_layout, ConstraintSet.END, R.id.vertical_center_percent_main_menu_layout, ConstraintSet.START);
+        set.setHorizontalBias(R.id.image_menu_main_menu_layout, 0.5f);
+
+        set.connect(R.id.image_profile_main_menu_layout, ConstraintSet.START, R.id.vertical_center_percent_main_menu_layout, ConstraintSet.END);
+        set.setHorizontalBias(R.id.image_menu_main_menu_layout, 0.5f);
+
+        set.connect(R.id.profile_main_menu_layout, ConstraintSet.START, R.id.vertical_center_percent_main_menu_layout, ConstraintSet.END);
+        set.setHorizontalBias(R.id.image_menu_main_menu_layout, 0.5f);
+
+        set.applyTo(constraintLayout);
     }
 
     public void profile(View view) {
@@ -105,15 +112,14 @@ public class MainMenuActivity extends AppCompatActivity {
 
     public void calculator(View view) {
 
-        intent = new Intent(this, SimpleCalculator.class);
+        intent = new Intent(this, SimpleCalculatorActivity.class);
         startActivity(intent);
     }
 
     public void myProject(View view) {
 
-        intent = new Intent(this, MyProject.class);
+        intent = new Intent(this, MyProjectsListActivity.class);
         startActivity(intent);
-
     }
 
     @Override
@@ -136,19 +142,16 @@ public class MainMenuActivity extends AppCompatActivity {
     }
 
     public void calculation_of_works(View view) {
-/*
-        intent = new Intent(this, CategoryOfWorksOrMaterials.class);
-        intent.putExtra("activity_selection","Works");
-        startActivity(intent);*/
 
-        intent = new Intent(this, CalculationOfWork.class);
+        intent = new Intent(this, CategoryOfWorksOrMaterialsActivity.class);
+        intent.putExtra(ACTIVITY_SELECTION,WORKS);
         startActivity(intent);
     }
 
     public void calculation_of_materials(View view) {
 
-        intent = new Intent(this, CategoryOfWorksOrMaterials.class);
-        intent.putExtra("activity_selection","Materials");
+        intent = new Intent(this, CategoryOfWorksOrMaterialsActivity.class);
+        intent.putExtra(ACTIVITY_SELECTION,MATERIALS);
         startActivity(intent);
     }
 }

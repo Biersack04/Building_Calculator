@@ -1,4 +1,4 @@
-package com.example.buildingcalculator;
+package com.example.buildingcalculator.Authentication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -9,12 +9,16 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.buildingcalculator.EditProfileActivity;
+import com.example.buildingcalculator.MainMenuActivity;
+import com.example.buildingcalculator.R;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.material.textview.MaterialTextView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import static com.example.buildingcalculator.Constants.*;
@@ -23,58 +27,54 @@ public class RegistrationActivity extends AppCompatActivity {
 
     TextInputLayout roleList;
     AutoCompleteTextView roleItem;
-
     ArrayAdapter<String> arrayAdapter_role;
     String[] role_items;
-
-    TextView logIn, registration, withoutRegistration;
-    Button register;
+    MaterialTextView logIn, registration, withoutRegistration;
+    MaterialButton register;
     Intent intent;
-
     SharedPreferences sPref;
-
     SharedPreferences.Editor editor;
     FirebaseAuth auth;
-
-    String email = "", password = "";
-    String chooseRole = "";
+    String email = "", password = "", chooseRole = "";
     private ProgressBar progressBar;
-
     TextInputEditText inputEmail, inputPassword;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
-        inputEmail = findViewById(R.id.email_edit_text);
-        inputPassword = findViewById(R.id.password_edit_text);
-        progressBar = findViewById(R.id.progressBar);
-        roleList = findViewById(R.id.role_input);
-        roleItem = findViewById(R.id.role_item);
+        layoutElementsInit();
 
+        auth = FirebaseAuth.getInstance();
+
+        sPref = getSharedPreferences(APP_PREFERENCES_NAME, MODE_PRIVATE);
+    }
+
+    public void layoutElementsInit(){
+
+        inputEmail = findViewById(R.id.email_edit_text_registration_layout);
+        inputPassword = findViewById(R.id.password_edit_text_registration_layout);
+        progressBar = findViewById(R.id.progress_bar_registration_layout);
+
+        roleList = findViewById(R.id.role_input_registration_layout);
+        roleItem = findViewById(R.id.role_item_registration_layout);
         role_items = getResources().getStringArray(R.array.role_items);
         arrayAdapter_role = new ArrayAdapter<>(getApplicationContext(), R.layout.dropdown_menu_item, role_items);
         roleItem.setAdapter(arrayAdapter_role);
         roleItem.setOnItemClickListener(onItemClickListener);
 
-        logIn = findViewById(R.id.logInTextView);
+        logIn = findViewById(R.id.logInTextView_registration_layout);
         logIn.setTypeface(Typeface.createFromAsset(getAssets(), getString(R.string.roboto_medium)));
 
-        registration = findViewById(R.id.registration);
+        registration = findViewById(R.id.registration_text_view_registration_layout);
         registration.setTypeface(Typeface.createFromAsset(getAssets(), getString(R.string.roboto_medium)));
 
-        register = findViewById(R.id.button_register);
+        register = findViewById(R.id.button_register_registration_layout);
         register.setTypeface(Typeface.createFromAsset(getAssets(), getString(R.string.roboto_medium)));
 
-        withoutRegistration = findViewById(R.id.without_registration_text_view);
+        withoutRegistration = findViewById(R.id.without_registration_text_view_registration_layout);
         withoutRegistration.setTypeface(Typeface.createFromAsset(getAssets(), getString(R.string.roboto_italic)));
-
-        auth = FirebaseAuth.getInstance();
-
-        sPref = getSharedPreferences(APP_PREFERENCES_NAME, MODE_PRIVATE);
     }
 
     private final AdapterView.OnItemClickListener onItemClickListener =
@@ -107,7 +107,6 @@ public class RegistrationActivity extends AppCompatActivity {
         {
                 roleList.setError(getString(R.string.role_error));
         }
-
     }
 
     public void register(String chooseRole) {
@@ -128,10 +127,9 @@ public class RegistrationActivity extends AppCompatActivity {
                             SharedPreferencesRole(chooseRole);
                             SharedPreferencesRegistrationFlag(false);
 
-                            intent = new Intent(RegistrationActivity.this, MainMenuActivity.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                            startActivity(intent);
-                            finish();
+                            sharedPreferencesCreateProfile(false);
+
+                            intentCreateProfile();
                         }
                 });
     }
@@ -146,10 +144,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
         SharedPreferencesRegistrationFlag(true);
 
-        intent = new Intent(this, MainMenuActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-        finish();
+        intentMainMenu();
     }
 
     public void SharedPreferencesRole(String role){
@@ -159,10 +154,34 @@ public class RegistrationActivity extends AppCompatActivity {
         editor.apply();
     }
 
-    public void SharedPreferencesRegistrationFlag(boolean flag){
+    public void SharedPreferencesRegistrationFlag(boolean registrationFlag){
 
         editor = sPref.edit();
-        editor.putBoolean(PREFERENCES_FLAG_REGISTRATION, flag);
+        editor.putBoolean(PREFERENCES_FLAG_REGISTRATION, registrationFlag);
+        editor.apply();
+    }
+
+    public void intentMainMenu() {
+
+        intent = new Intent(this, MainMenuActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
+
+    public void intentCreateProfile() {
+
+        intent = new Intent(this, EditProfileActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra(CREATE_PROFILE, true);
+        startActivity(intent);
+        finish();
+    }
+
+    public void sharedPreferencesCreateProfile(boolean createProfile){
+
+        editor = sPref.edit();
+        editor.putBoolean(PROFILE_IS_COMPLETED, createProfile);
         editor.apply();
     }
 

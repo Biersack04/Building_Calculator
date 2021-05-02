@@ -5,21 +5,22 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.TextView;
+
+import com.example.buildingcalculator.Authentication.LogInActivity;
+import com.google.android.material.textview.MaterialTextView;
 
 import static com.example.buildingcalculator.Constants.SPLASH_DISPLAY_LENGTH;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
-    TextView loadingText;
+    MaterialTextView loadingText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        loadingText = findViewById(R.id.loading_text_vew);
-        loadingText.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
+        initTextView();
 
         new Handler().postDelayed(() -> {
 
@@ -28,6 +29,12 @@ public class SplashScreenActivity extends AppCompatActivity {
             SplashScreenActivity.this.finish();
 
         }, SPLASH_DISPLAY_LENGTH);
+    }
+
+    public void initTextView(){
+
+        loadingText = findViewById(R.id.loading_text_vew);
+        loadingText.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
     }
 
     @Override

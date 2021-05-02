@@ -1,5 +1,9 @@
 package com.example.buildingcalculator;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -7,17 +11,13 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 
 import static com.example.buildingcalculator.Constants.ACTIVITY_SELECTION;
 import static com.example.buildingcalculator.Constants.MATERIALS;
 import static com.example.buildingcalculator.Constants.WORKS;
 
-public class ChooseOfWorks extends AppCompatActivity {
+public class CategoryOfWorksOrMaterialsActivity extends AppCompatActivity {
 
     private ArrayList<RecyclerItem> listItems;
     private RecyclerAdapter adapter;
@@ -28,7 +28,7 @@ public class ChooseOfWorks extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_of_works);
+        setContentView(R.layout.activity_category_of_w_or_m);
         Bundle arguments = getIntent().getExtras();
         if (arguments !=null)
         {
@@ -37,9 +37,17 @@ public class ChooseOfWorks extends AppCompatActivity {
         calculationOfWorksOrMaterials = findViewById(R.id.calculation_of_works);
         editText = findViewById(R.id.search_of_works);
 
-        calculationOfWorksOrMaterials.setText(getString(R.string.calculation_of_works));
-        editText.setHint(getString(R.string.search_of_works));
+        if (activitySelection.equals(WORKS))
+        {
+            calculationOfWorksOrMaterials.setText(getString(R.string.calculation_of_works));
+            editText.setHint(getString(R.string.search_category_of_works));
+        }
+        else if (activitySelection.equals(MATERIALS))
+        {
+            calculationOfWorksOrMaterials.setText(getString(R.string.calculation_of_materials_one_line));
+            editText.setHint(getString(R.string.search_category_of_materials));
 
+        }
 
         createExampleList();
         buildRecyclerView();
@@ -92,10 +100,9 @@ public class ChooseOfWorks extends AppCompatActivity {
     private void createExampleList() {
         listItems = new ArrayList<>();
         //Generate sample data
-        listItems.add(new RecyclerItem("Грунтовка стен"));
-        listItems.add(new RecyclerItem("Шпаклевка стен"));
-        listItems.add(new RecyclerItem("Покраска стен"));
-        listItems.add(new RecyclerItem("Поклейка обоев"));
+        listItems.add(new RecyclerItem("Потолок"));
+        listItems.add(new RecyclerItem("Стены"));
+        listItems.add(new RecyclerItem("Электрика"));
 
     }
 
