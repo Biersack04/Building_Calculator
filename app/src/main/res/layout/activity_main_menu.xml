@@ -9,232 +9,233 @@
     android:id="@+id/container">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/left_guideline_24dp"
+        android:id="@id/left_guideline_32dp_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="32dp" />
+        app:layout_constraintGuide_begin="@dimen/guideline_32dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/right_guideline_24dp"
+        android:id="@id/right_guideline_32dp_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="32dp" />
+        app:layout_constraintGuide_end="@dimen/guideline_32dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/left_min"
+        android:id="@id/left_guideline_24dp_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="24dp" />
+        app:layout_constraintGuide_begin="@dimen/guideline_24dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/right_min"
+        android:id="@id/right_guideline_24dp_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="24dp" />
+        app:layout_constraintGuide_end="@dimen/guideline_24dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/down_guideline_48dp"
+        android:id="@id/down_guideline_16dp_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="16dp" />
+        app:layout_constraintGuide_end="@dimen/guideline_16dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/down_image"
+        android:id="@id/guideline_down_image_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="32dp" />
+        app:layout_constraintGuide_end="@dimen/guideline_32dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vertical_center_percent"
+        android:id="@id/vertical_center_percent_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/left_center"
+        android:id="@id/left_quarter_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/right_center"
+        android:id="@id/right_quarter_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.75" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/down_guideline_percent_7"
+        android:id="@id/down_guideline_percent_7_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.7" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/top_guideline_72dp"
+        android:id="@id/top_guideline_percent_25_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.25" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/calculator"
+        android:id="@id/calculator_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:paddingLeft="24dp"
-        android:paddingTop="56dp"
-        android:paddingRight="24dp"
-        android:paddingBottom="56dp"
-        android:shadowDx="2"
-        android:shadowDy="5"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:layout_marginRight="@dimen/margin_4"
+        android:paddingLeft="@dimen/padding_24"
+        android:paddingTop="@dimen/padding_56"
+        android:paddingRight="@dimen/padding_24"
+        android:paddingBottom="@dimen/padding_56"
+        android:shadowDx="@integer/shadow_dx"
+        android:shadowDy="@integer/shadow_dy"
         android:text="@string/calculator"
         android:textColor="@color/black"
         android:onClick="calculator"
         app:backgroundTint="@color/white"
-        app:cornerRadius="10dp"
-        app:elevation="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
+        app:cornerRadius="@dimen/corner_radius"
+        app:elevation="@dimen/elevation"
+        app:layout_constraintEnd_toStartOf="@id/vertical_center_percent_main_menu_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/left_min"
-        app:layout_constraintTop_toTopOf="@+id/top_guideline_72dp"
+        app:layout_constraintStart_toStartOf="@id/left_guideline_24dp_main_menu_layout"
+        app:layout_constraintTop_toTopOf="@id/top_guideline_percent_25_main_menu_layout"
         app:strokeColor="@color/box_stroke"
-        app:strokeWidth="4dp" />
+        app:strokeWidth="@dimen/main_box_stroke_width" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/calculation_of_works"
+        android:id="@id/calculation_of_works_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:paddingLeft="24dp"
-        android:paddingTop="56dp"
-        android:paddingRight="24dp"
-        android:paddingBottom="56dp"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginLeft="@dimen/margin_4"
+        android:paddingLeft="@dimen/padding_24"
+        android:paddingTop="@dimen/padding_56"
+        android:paddingRight="@dimen/padding_24"
+        android:paddingBottom="@dimen/padding_56"
+        android:shadowDx="@integer/shadow_dx"
+        android:shadowDy="@integer/shadow_dy"
         android:text="@string/calculation_of_works"
         android:textColor="@color/black"
         android:onClick="calculation_of_works"
         app:backgroundTint="@color/white"
-        app:cornerRadius="10dp"
-        app:elevation="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/right_min"
+        app:cornerRadius="@dimen/corner_radius"
+        app:elevation="@dimen/elevation"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_24dp_main_menu_layout"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toTopOf="@+id/top_guideline_72dp"
+        app:layout_constraintStart_toStartOf="@id/vertical_center_percent_main_menu_layout"
+        app:layout_constraintTop_toTopOf="@id/top_guideline_percent_25_main_menu_layout"
         app:strokeColor="@color/box_stroke"
-        app:strokeWidth="4dp" />
+        app:strokeWidth="@dimen/main_box_stroke_width" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/calculation_of_materials"
+        android:id="@id/calculation_of_materials_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
-        android:lines="2"
-        android:paddingLeft="24dp"
-        android:paddingTop="56dp"
-        android:paddingRight="24dp"
-        android:paddingBottom="56dp"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginBottom="@dimen/margin_24"
+        android:lines="@integer/lines"
+        android:paddingLeft="@dimen/padding_24"
+        android:paddingTop="@dimen/padding_56"
+        android:paddingRight="@dimen/padding_24"
+        android:paddingBottom="@dimen/padding_56"
+        android:shadowDx="@integer/shadow_dx"
+        android:shadowDy="@integer/shadow_dy"
         android:soundEffectsEnabled="false"
         android:text="@string/calculation_of_materials"
         android:onClick="calculation_of_materials"
         android:textColor="@color/black"
         android:textIsSelectable="false"
         app:backgroundTint="@color/white"
-        app:cornerRadius="10dp"
-        app:elevation="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/down_guideline_percent_7"
-        app:layout_constraintEnd_toStartOf="@+id/right_center"
-        app:layout_constraintStart_toStartOf="@+id/left_center"
-        app:layout_constraintTop_toBottomOf="@+id/calculator"
+        app:cornerRadius="@dimen/corner_radius"
+        app:elevation="@dimen/elevation"
+        app:layout_constraintBottom_toTopOf="@id/down_guideline_percent_7_main_menu_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_quarter_main_menu_layout"
+        app:layout_constraintStart_toStartOf="@id/left_quarter_main_menu_layout"
+        app:layout_constraintTop_toBottomOf="@id/calculator_main_menu_layout"
         app:strokeColor="@color/box_stroke"
-        app:strokeWidth="4dp" />
+        app:strokeWidth="@dimen/main_box_stroke_width" />
 
     <ImageView
-        android:id="@+id/image_menu"
+        android:id="@id/image_menu_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="@dimen/margin_8"
         android:src="@drawable/ic_menu_32"
-        app:layout_constraintBottom_toTopOf="@+id/down_image"
-        app:layout_constraintEnd_toStartOf="@+id/left_center"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toTopOf="@+id/down_guideline_percent_7"
+        app:layout_constraintBottom_toTopOf="@id/guideline_down_image_main_menu_layout"
+        app:layout_constraintEnd_toStartOf="@id/left_quarter_main_menu_layout"
+        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_main_menu_layout"
+        app:layout_constraintTop_toTopOf="@id/down_guideline_percent_7_main_menu_layout"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/image_profile"
+        android:id="@id/image_profile_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="@dimen/margin_8"
         android:onClick="profile"
         android:src="@drawable/ic_profile_32"
-        app:layout_constraintBottom_toTopOf="@+id/down_image"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
-        app:layout_constraintStart_toStartOf="@+id/right_center"
-        app:layout_constraintTop_toTopOf="@+id/down_guideline_percent_7"
+        app:layout_constraintBottom_toTopOf="@id/guideline_down_image_main_menu_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_main_menu_layout"
+        app:layout_constraintStart_toStartOf="@id/right_quarter_main_menu_layout"
+        app:layout_constraintTop_toTopOf="@id/down_guideline_percent_7_main_menu_layout"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/image_project"
+        android:id="@id/image_project_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="@dimen/margin_8"
         android:src="@drawable/ic_home_32"
-        app:layout_constraintBottom_toTopOf="@+id/down_image"
-        app:layout_constraintEnd_toStartOf="@+id/right_center"
-        app:layout_constraintStart_toStartOf="@+id/left_center"
-        app:layout_constraintTop_toTopOf="@+id/down_guideline_percent_7"
+        app:layout_constraintBottom_toTopOf="@id/guideline_down_image_main_menu_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_quarter_main_menu_layout"
+        app:layout_constraintStart_toStartOf="@id/left_quarter_main_menu_layout"
+        app:layout_constraintTop_toTopOf="@id/down_guideline_percent_7_main_menu_layout"
         app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/menu"
+        android:id="@id/menu_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/menu"
         android:textColor="@color/light_gray"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/down_guideline_48dp"
-        app:layout_constraintEnd_toStartOf="@+id/left_center"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toTopOf="@+id/down_image" />
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@id/down_guideline_16dp_main_menu_layout"
+        app:layout_constraintEnd_toStartOf="@id/left_quarter_main_menu_layout"
+        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_main_menu_layout"
+        app:layout_constraintTop_toTopOf="@id/guideline_down_image_main_menu_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/profile"
+        android:id="@id/profile_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="profile"
         android:text="@string/profile"
         android:textColor="@color/light_gray"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/down_guideline_48dp"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
-        app:layout_constraintStart_toStartOf="@+id/right_center"
-        app:layout_constraintTop_toTopOf="@+id/down_image" />
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@id/down_guideline_16dp_main_menu_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_main_menu_layout"
+        app:layout_constraintStart_toStartOf="@id/right_quarter_main_menu_layout"
+        app:layout_constraintTop_toTopOf="@id/guideline_down_image_main_menu_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/project"
+        android:id="@id/project_main_menu_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/my_projects"
         android:textColor="@color/light_gray"
-        android:textSize="12sp"
-        android:textStyle="bold"
+        android:textSize="@dimen/text_size"
         android:onClick="myProject"
-        app:layout_constraintBottom_toTopOf="@+id/down_guideline_48dp"
-        app:layout_constraintEnd_toStartOf="@+id/right_center"
-        app:layout_constraintStart_toStartOf="@+id/left_center"
-        app:layout_constraintTop_toTopOf="@+id/down_image" />
+        app:layout_constraintBottom_toTopOf="@id/down_guideline_16dp_main_menu_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_quarter_main_menu_layout"
+        app:layout_constraintStart_toStartOf="@id/left_quarter_main_menu_layout"
+        app:layout_constraintTop_toTopOf="@id/guideline_down_image_main_menu_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <integer name="shadow_dx">2</integer>
+    <integer name="shadow_dy">5</integer>
+    <integer name="counter_max_length">12</integer>
+    <integer name="lines">2</integer>
+    <integer name="weight_3">3</integer>
+    <integer name="weight_1">1</integer>
+    <integer name="calculator_column">4</integer>
+    <integer name="layout_column_weight">1</integer>
+    <integer name="layout_row_weight">1</integer>
+    <integer name="ems">10</integer>
+
+</resources>

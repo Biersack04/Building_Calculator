@@ -1,24 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--drop_down_menu-->
+    <item name="item_dropdown_menu" type="id" />
+
+    <!--recycler_item-->
+    <item name="txt_title_recycler" type="id" />
+
+    <!--splash_screen -->
     <item name="loading_text_vew" type="id"> </item>
-    <item name="left_guideline_24dp" type="id"> </item>
-    <item name="right_guideline_24dp" type="id"> </item>
-    <item name="top_guideline_72dp" type="id"> </item>
-    <item name="vertical_center_percent" type="id"> </item>
-    <item name="down_guideline_48dp" type="id"> </item>
-    <item name="down_guideline_percent_7" type="id"> </item>
-    <item name="logInTextView" type="id"> </item>
-    <item name="registrationTextView" type="id"> </item>
-    <item name="log_in_linear_layout" type="id"> </item>
-    <item name="email_layout" type="id"> </item>
-    <item name="email_edit_text" type="id"> </item>
-    <item name="password_layout" type="id"> </item>
 
-    <item name="password_edit_text" type="id"> </item>
-    <item name="button_sign_in" type="id"> </item>
-    <item name="forgot_password_text_view" type="id"> </item>
-    <item name="without_registration_text_view" type="id"> </item>
-    <item name="progress_bar" type="id" />
+    <!-- log_in -->
+    <item name="left_guideline_24dp_log_in_layout" type="id" />
+    <item name="right_guideline_24dp_log_in_layout" type="id" />
+    <item name="top_guideline_72dp_log_in_layout" type="id" />
+    <item name="vertical_center_percent_log_in_layout" type="id" />
+    <item name="down_guideline_48dp_log_in_layout" type="id" />
+    <item name="down_guideline_percent_7_log_in_layout" type="id" />
 
+    <item name="logIn_text_view_log_in_layout" type="id" />
+    <item name="registration_text_view_log_in_layout" type="id" />
+    <item name="linear_layout_log_in" type="id"> </item>
+    <item name="email_layout_log_in_layout" type="id" />
+    <item name="email_edit_text_log_in_layout" type="id" />
+    <item name="password_layout_log_in_layout" type="id" />
+    <item name="password_edit_text_log_in_layout" type="id" />
+    <item name="forgot_password_text_view_log_in_layout" type="id"> </item>
+    <item name="button_sign_in_log_in_layout" type="id" />
+    <item name="progress_bar_log_in_layout" type="id" />
+    <item name="without_registration_text_view_log_in_layout" type="id"> </item>
+
+
+    <!-- registration -->
+    <item name="left_guideline_24dp_registration_layout" type="id" />
+    <item name="right_guideline_24dp_registration_layout" type="id" />
+    <item name="top_guideline_72dp_registration_layout" type="id" />
+    <item name="vertical_center_percent_registration_layout" type="id" />
+    <item name="down_guideline_48dp_registration_layout" type="id" />
+    <item name="down_guideline_percent_7_registration_layout" type="id" />
+
+    <item name="logInTextView_registration_layout" type="id" />
+    <item name="registration_text_view_registration_layout" type="id" />
+    <item name="linear_layout_registration_layout" type="id" />
+    <item name="role_input_registration_layout" type="id" />
+    <item name="role_item_registration_layout" type="id" />
+    <item name="email_layout_registration_layout" type="id" />
+    <item name="email_edit_text_registration_layout" type="id" />
+    <item name="password_layout_registration_layout" type="id" />
+    <item name="password_edit_text_registration_layout" type="id" />
+    <item name="button_register_registration_layout" type="id" />
+    <item name="without_registration_text_view_registration_layout" type="id" />
+    <item name="progress_bar_registration_layout" type="id" />
+
+    <!-- reset_password -->
+    <item name="left_guideline_24dp_reset_password_layout" type="id" />
+    <item name="right_guideline_24dp_reset_password_layout" type="id" />
+    <item name="down_guideline_percent_7_reset_password_layout" type="id" />
+
+    <item name="back_arrow_reset_password_layout" type="id" />
+    <item name="linear_layout_reset_password_layout" type="id" />
+    <item name="reset_password_text_view_reset_password_layout" type="id" />
+    <item name="email_layout_reset_password_layout" type="id" />
+    <item name="email_edit_text_reset_password_layout" type="id" />
+    <item name="button_reset_password_reset_password_layout" type="id" />
+
+    <!-- main_menu -->
+    <item name="left_guideline_32dp_main_menu_layout" type="id" />
+    <item name="right_guideline_32dp_main_menu_layout" type="id" />
+    <item name="left_guideline_24dp_main_menu_layout" type="id" />
+    <item name="right_guideline_24dp_main_menu_layout" type="id" />
+    <item name="down_guideline_16dp_main_menu_layout" type="id" />
+    <item name="guideline_down_image_main_menu_layout" type="id" />
+    <item name="vertical_center_percent_main_menu_layout" type="id" />
+    <item name="left_quarter_main_menu_layout" type="id" />
+    <item name="right_quarter_main_menu_layout" type="id" />
+    <item name="down_guideline_percent_7_main_menu_layout" type="id" />
+    <item name="top_guideline_percent_25_main_menu_layout" type="id" />
+
+    <item name="calculator_main_menu_layout" type="id" />
+    <item name="calculation_of_works_main_menu_layout" type="id" />
+    <item name="calculation_of_materials_main_menu_layout" type="id" />
+    <item name="image_menu_main_menu_layout" type="id" />
+    <item name="image_profile_main_menu_layout" type="id" />
+    <item name="image_project_main_menu_layout" type="id" />
+    <item name="menu_main_menu_layout" type="id" />
+    <item name="profile_main_menu_layout" type="id" />
+    <item name="project_main_menu_layout" type="id" />
+
+    <!-- simple_calculator-->
+    <item name="vertical_center_percent_simple_calculator_layout" type="id" />
+    <item name="linear_layout_simple_calculator_layout" type="id" />
+    <item name="enter_text_view_simple_calculator_layout" type="id" />
+    <item name="result_text_view_simple_calculator_layout" type="id" />
+
+
+
+    <!-- profile-->
+    <item name="vertical_center_percent_profile_layout" type="id" />
+    <item name="down_guideline_top_72_profile_layout" type="id" />
+    <item name="right_quarter_profile_layout" type="id" />
+    <item name="top_guideline_quarter_profile_layout" type="id" />
+    <item name="left_quarter_profile_layout" type="id" />
+    <item name="down_text_profile_layout" type="id" />
+    <item name="down_image_profile_layout" type="id" />
+    <item name="left_guideline_32dp_profile_layout" type="id" />
+    <item name="right_guideline_32dp_profile_layout" type="id" />
+
+    <item name="edit_profile_profile_layout" type="id" />
+    <item name="all_cancel_simple_calculator" type="id" />
+    <item name="cancel_simple_calculator" type="id" />
+
+
+    <!-- edit_profile-->
+    <item name="down_guideline_72dp_edit_profile_layout" type="id" />
+    <item name="right_quarter_edit_profile_layout" type="id" />
+    <item name="top_guideline_24dp_edit_profile_layout" type="id" />
+    <item name="left_quarter_edit_profile_layout" type="id" />
+    <item name="down_guideline_text_edit_profile_layout" type="id" />
+    <item name="down_guideline_image_edit_profile_layout" type="id" />
+    <item name="left_guideline_32dp_edit_profile_layout" type="id" />
+    <item name="right_guideline_32dp_edit_profile_layout" type="id" />
+
+    <item name="image_edit_edit_profile_layout" type="id" />
+    <item name="image_back_arrow_edit_profile_layout" type="id" />
+    <item name="text_view_edit_profile_layout" type="id" />
+    <item name="surname_layout_edit_profile_layout" type="id" />
+    <item name="edit_surname_edit_profile_layout" type="id" />
+    <item name="name_layout_edit_profile_layout" type="id" />
+    <item name="edit_name_edit_profile_layout" type="id" />
+    <item name="patronymic_layout_edit_profile_layout" type="id" />
+    <item name="edit_patronymic_edit_profile_layout" type="id" />
+    <item name="email_layout_edit_profile_layout" type="id" />
+    <item name="edit_email_edit_profile_layout" type="id" />
+    <item name="edit_telephone_edit_profile_layout" type="id" />
+    <item name="telephone_layout_edit_profile_layout" type="id" />
+    <item name="status_input_edit_profile_layout" type="id" />
+    <item name="status_item_edit_profile_layout" type="id" />
+    <item name="edit_name_of_firm_edit_profile_layout" type="id" />
+    <item name="name_of_firm_layout_edit_profile_layout" type="id" />
+    <item name="edit_address_edit_profile_layout" type="id" />
+    <item name="address_layout_edit_profile_layout" type="id" />
+    <item name="number_workers_edit_profile_layout" type="id" />
+    <item name="enter_number_completed_projects_edit_profile_layout" type="id" />
+    <item name="edit_number_of_workers_edit_profile_layout" type="id" />
+    <item name="edit_number_of_completed_projects_edit_profile_layout" type="id" />
+    <item name="image_menu_edit_profile_layout" type="id" />
+    <item name="image_project_edit_profile_layout" type="id" />
+    <item name="image_profile_edit_profile_layout" type="id" />
+
+
+    <item name="menu_edit_profile_layout" type="id" />
+    <item name="project_edit_profile_layout" type="id" />
+    <item name="profile_edit_profile_layout" type="id" />
+    <item name="log_out_profile_profile_layout" type="id" />
+    <item name="image_profile_profile_layout" type="id" />
+    <item name="personal_information_profile_layout" type="id" />
+    <item name="surname_profile_layout" type="id" />
+    <item name="name_profile_layout" type="id" />
+    <item name="email_edit_text_profile_layout" type="id" />
+    <item name="telephone_profile_layout" type="id" />
+    <item name="name_of_firm_profile_layout" type="id" />
+    <item name="address_profile_layout" type="id" />
+    <item name="number_of_workers_profile_layout" type="id" />
+    <item name="status_profile_layout" type="id" />
+    <item name="personal_surname_profile_layout" type="id" />
+    <item name="personal_name_profile_layout" type="id" />
+    <item name="personal_patronymic_profile_layout" type="id" />
+    <item name="personal_email_profile_layout" type="id" />
+    <item name="personal_name_of_firm_profile_layout" type="id" />
+    <item name="personal_address_profile_layout" type="id" />
+    <item name="personal_number_of_workers_profile_layout" type="id" />
+    <item name="image_menu_profile_layout" type="id" />
+    <item name="image_project_profile_layout" type="id" />
+    <item name="menu_profile_layout" type="id" />
+    <item name="profile_profile_layout" type="id" />
+    <item name="project_profile_layout" type="id" />
+    <item name="patronymic_profile_layout" type="id" />
+    <item name="personal_telephone_profile_layout" type="id" />
+    <item name="personal_status_profile_layout" type="id" />
+    <item name="number_of_completed_project_profile_layout" type="id" />
+    <item name="personal_number_of_completed_project_profile_layout" type="id" />
+
+
+    ----
+
+
+    ---
 
 </resources>

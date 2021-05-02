@@ -6,13 +6,13 @@
     android:id="@+id/cardViewID"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp"
+    android:layout_margin="@dimen/margin_4"
     android:clickable="true"
     android:focusable="true"
     card_view:cardBackgroundColor="@color/background"
     app:strokeColor="@color/light_gray"
-    app:strokeWidth="2dp"
-    card_view:cardCornerRadius="10dp">
+    app:strokeWidth="@dimen/stroke_width"
+    card_view:cardCornerRadius="@dimen/corner_radius">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,14 +20,14 @@
         android:orientation="vertical">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txtTitle"
-            android:padding="16dp"
+            android:id="@id/txt_title_recycler"
+            android:padding="@dimen/padding_16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:textColor="@color/white"
             android:textAlignment="center"
-            android:textSize="14dp" />
+            android:textSize="@dimen/button_text_size" />
 
     </LinearLayout>
 

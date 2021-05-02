@@ -5,331 +5,344 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".SimpleCalculator">
+    tools:context=".SimpleCalculatorActivity">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vertical_center_percent"
+        android:id="@id/vertical_center_percent_simple_calculator_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@id/linear_layout_simple_calculator_layout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_height="@dimen/zero_value"
+        android:layout_weight="@integer/weight_3"
         android:orientation="vertical"
         android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/vertical_center_percent"
+        app:layout_constraintBottom_toTopOf="@id/vertical_center_percent_simple_calculator_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <TextView
-            android:id="@+id/workingsTextView"
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@id/enter_text_view_simple_calculator_layout"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/zero_value"
             android:layout_gravity="end"
-            android:layout_weight="1"
+            android:layout_weight="@integer/weight_1"
             android:gravity="center_vertical"
-            android:paddingRight="30dp"
+            android:layout_marginRight="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
             android:text=""
             android:textAlignment="textEnd"
             android:textColor="@color/dark_blue"
-            android:textSize="30sp"
-            tools:ignore="RtlCompat" />
+            android:textSize="@dimen/calculator_text_size_enter"
+            tools:ignore="RtlCompat,RtlSymmetry" />
 
-        <TextView
-            android:id="@+id/resultTextView"
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@id/result_text_view_simple_calculator_layout"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/zero_value"
             android:layout_gravity="end"
-            android:layout_weight="1"
+            android:layout_weight="@integer/weight_1"
             android:gravity="center_vertical"
-            android:paddingRight="30dp"
+            android:layout_marginRight="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
             android:text=""
             android:textAlignment="textEnd"
             android:textColor="@color/dark_blue"
-            android:textSize="45sp"
-            tools:ignore="RtlCompat" />
+            android:textSize="@dimen/calculator_text_size_result"
+            tools:ignore="RtlCompat,RtlSymmetry" />
 
     </LinearLayout>
 
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        app:columnCount="4"
+        android:layout_height="@dimen/zero_value"
+        android:layout_margin="@dimen/margin_8"
+        app:columnCount="@integer/calculator_column"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_simple_calculator_layout"
         app:orientation="horizontal"
         app:useDefaultMargins="true">
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:id="@id/all_cancel_simple_calculator"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="AC"
+            android:text="@string/ac_on_calculator"
             android:textColor="@color/box_stroke"
+            android:onClick="allCancel"
             app:backgroundTint="@color/white"
-            app:cornerRadius="10dp"
-            android:textSize="20sp"
-            app:layout_columnWeight="1"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
             app:layout_gravity="fill"
-            app:layout_rowWeight="1" />
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:id="@id/cancel_simple_calculator"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="C"
-            android:textSize="20sp"
+            android:text="@string/c_on_calculator"
             android:textColor="@color/box_stroke"
             app:backgroundTint="@color/white"
-            app:cornerRadius="10dp"
-            app:layout_columnWeight="1"
+            android:onClick="cancel"
+            app:elevation="@dimen/elevation"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
             app:layout_gravity="fill"
-            app:layout_rowWeight="1" />
+            app:layout_rowWeight="@integer/layout_row_weight"  />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="&#37;"
+            android:onClick="division"
+            app:elevation="@dimen/elevation"
+            android:text="@string/division_on_calculator"
             android:textColor="@color/box_stroke"
             app:backgroundTint="@color/white"
-            app:cornerRadius="10dp"
-            app:layout_columnWeight="1"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
             app:layout_gravity="fill"
-            android:textSize="20sp"
-            app:layout_rowWeight="1" />
-
+            app:layout_rowWeight="@integer/layout_row_weight" />
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:onClick="divisionOnClick"
-            android:text="&#247;"
-            android:textColor="@color/box_stroke"
-            app:backgroundTint="@color/white"
-            app:cornerRadius="10dp"
-            app:layout_columnWeight="1"
-            android:textSize="20sp"
-            app:layout_gravity="fill"
-            app:layout_rowWeight="1" />
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="1"
-            app:layout_columnWeight="1"
-            app:layout_gravity="fill"
-            android:textSize="20sp"
-            app:cornerRadius="10dp"
+            android:text="@string/multiplication_on_calculator"
             app:backgroundTint="@color/white"
             android:textColor="@color/box_stroke"
-            app:layout_rowWeight="1"
-            android:onClick="oneOnClick" />
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
+            app:layout_gravity="fill"
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight"
+            android:onClick="multiplication"/>
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="2"
-            app:layout_columnWeight="1"
+            android:text="@string/one"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
             app:layout_gravity="fill"
-            app:cornerRadius="10dp"
-            android:textSize="20sp"
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight"
             app:backgroundTint="@color/white"
             android:textColor="@color/box_stroke"
-            app:layout_rowWeight="1"
-            android:onClick="twoOnClick"/>
+            android:onClick="one" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="3"
-            android:textSize="20sp"
-            app:layout_columnWeight="1"
+            android:text="@string/two"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
             app:layout_gravity="fill"
-            app:cornerRadius="10dp"
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight"
             app:backgroundTint="@color/white"
             android:textColor="@color/box_stroke"
-            app:layout_rowWeight="1"
-            android:onClick="threeOnClick"/>
+            android:onClick="two"/>
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="&#215;"
-            app:layout_columnWeight="1"
+            android:text="@string/three"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
+            app:layout_gravity="fill"
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight"
             app:backgroundTint="@color/white"
             android:textColor="@color/box_stroke"
-            app:layout_gravity="fill"
-            app:layout_rowWeight="1"
-            android:textSize="20sp"
-            app:cornerRadius="10dp"
-            android:onClick="multiplicationOnClick"/>
+            android:onClick="three"/>
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="4"
-            app:layout_columnWeight="1"
+            android:text="@string/subtraction_on_calculator"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
             app:layout_gravity="fill"
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight"
             app:backgroundTint="@color/white"
             android:textColor="@color/box_stroke"
-            app:layout_rowWeight="1"
-            app:cornerRadius="10dp"
-            android:textSize="20sp"
-            android:onClick="fourOnClick"/>
+            android:onClick="minus"/>
+
+
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="5"
-            app:layout_columnWeight="1"
-            app:layout_gravity="fill"
-            app:cornerRadius="10dp"
+            android:text="@string/four"
             app:backgroundTint="@color/white"
             android:textColor="@color/box_stroke"
-            app:layout_rowWeight="1"
-            android:textSize="20sp"
-            android:onClick="fiveOnClick"/>
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
+            app:layout_gravity="fill"
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight"
+            android:onClick="four"/>
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="6"
-            app:layout_columnWeight="1"
+            android:text="@string/five"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
             app:layout_gravity="fill"
-            android:textSize="20sp"
-            app:layout_rowWeight="1"
-            app:cornerRadius="10dp"
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight"
             app:backgroundTint="@color/white"
             android:textColor="@color/box_stroke"
-            android:onClick="sixOnClick"/>
+            android:onClick="five"/>
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="&#8722;"
-            app:layout_columnWeight="1"
-            android:textSize="20sp"
+            android:text="@string/six"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
             app:layout_gravity="fill"
-            app:cornerRadius="10dp"
-            app:layout_rowWeight="1"
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight"
             app:backgroundTint="@color/white"
             android:textColor="@color/box_stroke"
-            android:onClick="minusOnClick"/>
+            android:onClick="six"/>
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="7"
-            android:textSize="20sp"
-            app:layout_columnWeight="1"
+            android:text="@string/plus_on_calculator"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
             app:layout_gravity="fill"
-            app:cornerRadius="10dp"
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight"
             app:backgroundTint="@color/white"
             android:textColor="@color/box_stroke"
-            app:layout_rowWeight="1"
-            android:onClick="sevenOnClick"/>
+            android:onClick="plus"/>
 
         <com.google.android.material.button.MaterialButton
-
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="8"
-            app:layout_columnWeight="1"
-            android:textSize="20sp"
+            android:text="@string/seven"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
             app:layout_gravity="fill"
-            app:layout_rowWeight="1"
-            app:cornerRadius="10dp"
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight"
             app:backgroundTint="@color/white"
             android:textColor="@color/box_stroke"
-            android:onClick="eightOnClick"/>
+            android:onClick="seven"/>
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="9"
-            app:layout_columnWeight="1"
+            android:text="@string/eight"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
+            app:layout_gravity="fill"
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight"
             app:backgroundTint="@color/white"
             android:textColor="@color/box_stroke"
-            app:layout_gravity="fill"
-            android:textSize="20sp"
-            app:layout_rowWeight="1"
-            app:cornerRadius="10dp"
-            android:onClick="nineOnClick"/>
+            android:onClick="eight"/>
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="&#43;"
-            app:layout_columnWeight="1"
-            app:layout_gravity="fill"
-            app:layout_rowWeight="1"
-            app:cornerRadius="10dp"
-            android:textSize="20sp"
+            android:text="@string/nine"
             app:backgroundTint="@color/white"
             android:textColor="@color/box_stroke"
-            android:onClick="plusOnClick"/>
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
+            app:layout_gravity="fill"
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight"
+            android:onClick="nine"/>
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="&#65049;"
+            android:text="@string/equals_on_calculator"
+            app:backgroundTint="@color/white"
+            android:textColor="@color/box_stroke"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
+            app:layout_gravity="fill"
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight"
+            android:onClick="equals"
+            app:layout_rowSpan="2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="@dimen/zero_value"
+            android:layout_height="wrap_content"
+            android:text="@string/other_on_calculator"
             android:background="@android:color/transparent"
-            app:layout_columnWeight="1"
             app:backgroundTint="@color/white"
-            android:textSize="20sp"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
             app:layout_gravity="fill"
-            app:layout_rowWeight="1" />
+            android:shadowDx="@integer/shadow_dx"
+            android:shadowDy="@integer/shadow_dy"
+            app:elevation="@dimen/elevation"
+            android:onClick="otherCalculateFunctions"
+            app:layout_rowWeight="@integer/layout_row_weight"  />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="0"
-            app:layout_columnWeight="1"
+            android:text="@string/zero"
             app:backgroundTint="@color/white"
             android:textColor="@color/box_stroke"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
             app:layout_gravity="fill"
-            app:cornerRadius="10dp"
-            app:layout_rowWeight="1"
-            android:textSize="20sp"
-            android:onClick="zeroOnClick"/>
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight"
+            android:onClick="zero"/>
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_value"
             android:layout_height="wrap_content"
-            android:text="&#8218;"
+            android:text="@string/point_on_calculator"
             app:backgroundTint="@color/white"
             android:textColor="@color/box_stroke"
-            app:layout_columnWeight="1"
+            app:cornerRadius="@dimen/corner_radius"
+            android:textSize="@dimen/calculator_text_button"
+            app:layout_columnWeight="@integer/layout_column_weight"
             app:layout_gravity="fill"
-            app:cornerRadius="10dp"
-            android:textSize="20sp"
-            app:layout_rowWeight="1"
-            android:onClick="decimalOnClick"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="&#42239;"
-            app:layout_columnWeight="1"
-            app:cornerRadius="10dp"
-            app:backgroundTint="@color/white"
-            android:textColor="@color/box_stroke"
-            app:layout_gravity="fill"
-            app:layout_rowWeight="1"
-            android:textSize="20sp"
-            android:onClick="equalsOnClick"/>
+            app:elevation="@dimen/elevation"
+            app:layout_rowWeight="@integer/layout_row_weight"
+            android:onClick="point"/>
 
     </androidx.gridlayout.widget.GridLayout>
 

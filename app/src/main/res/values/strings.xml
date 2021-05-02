@@ -50,6 +50,29 @@
     <string name="profile">Профиль</string>
     <string name="my_projects">Мои проекты</string>
 
+    <!-- simple_calculator-->
+    <string name="ac_on_calculator">AC</string>
+    <string name="c_on_calculator">C</string>
+    <string name="percent_on_calculator">%</string>
+    <string name="division_on_calculator">÷</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="multiplication_on_calculator">×</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="subtraction_on_calculator">−</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="plus_on_calculator">+</string>
+    <string name="other_on_calculator">︙</string>
+    <string name="zero">0</string>
+    <string name="point_on_calculator">.</string>
+    <string name="equals_on_calculator">꓿</string>
+
+
     <!-- profile-->
     <string name="personal_data">Персональные данные</string>
     <string name="surname">Фамилия</string>
@@ -61,13 +84,14 @@
     <string name="address">Адрес</string>
     <string name="qty_of_workers">Кол-во работников</string>
     <string name="qty_of_completed_projects">Кол-во выполненых проектов</string>
+    <string name="create_profile">Создание профиля</string>
     <string name="edit_profile">Редактирование профиля</string>
     <string name="enter_surname">Введите фамилию</string>
     <string name="enter_name">Введите имя</string>
     <string name="enter_patronymic">Введите отчество</string>
     <string name="enter_telephone">Введите телефон</string>
     <string name="enter_email">Введите email</string>
-    <string name="enter_status">Введите статус</string>
+    <string name="enter_status">Выберете статус</string>
     <string name="enter_name_of_firm">Введите название фирмы</string>
 
     <string name="enter_title">Введите название</string>
@@ -76,6 +100,20 @@
     <string name="enter_address">Введите адрес</string>
     <string name="enter_qty_workers">Введите кол-во работников</string>
     <string name="enter_qty_completed_projects">Введите кол-во выполненых проектов</string>
+
+    <string-array name="status_items">
+        <item>Юр.лицо</item>
+        <item>Физ.лицо</item>
+    </string-array>
+
+
+    <string name="save_people_error">Ошибка сохранения профиля</string>
+
+
+
+
+
+
 
     <string name="search_category_of_works">Поиск по категориям работ…</string>
     <string name="search_category_of_materials">Поиск по категориям материалов…</string>
@@ -102,6 +140,7 @@
     <string name="information_about_project">Информация о проекте</string>
     <string name="list_of_works">Список работ</string>
     <string name="list_of_materials">Список материалов</string>
+
 
 
 </resources>

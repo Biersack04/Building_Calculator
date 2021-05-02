@@ -8,447 +8,460 @@
     tools:context=".ProfileActivity">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vertical_center_percent"
+        android:id="@id/vertical_center_percent_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/down_guideline_percent_7"
+        android:id="@id/down_guideline_top_72_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="72dp" />
+        app:layout_constraintGuide_end="@dimen/guideline_72dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/right_center"
+        android:id="@id/right_quarter_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.75" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/top_guideline_72dp"
+        android:id="@id/top_guideline_quarter_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/left_center"
+        android:id="@id/left_quarter_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/down_text"
+        android:id="@id/down_text_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="16dp" />
+        app:layout_constraintGuide_end="@dimen/guideline_16dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/down_image"
+        android:id="@id/down_image_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="32dp" />
+        app:layout_constraintGuide_end="@dimen/guideline_32dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/left_guideline_24dp"
+        android:id="@id/left_guideline_32dp_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="32dp" />
+        app:layout_constraintGuide_begin="@dimen/guideline_32dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/right_guideline_24dp"
+        android:id="@id/right_guideline_32dp_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="32dp" />
+        app:layout_constraintGuide_end="@dimen/guideline_32dp" />
 
     <ImageView
-        android:id="@+id/edit_profile"
+        android:id="@id/edit_profile_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginBottom="@dimen/margin_8"
         android:onClick="editProfile"
         android:src="@drawable/ic_edit_24"
-        app:layout_constraintBottom_toTopOf="@+id/top_guideline_72dp"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintBottom_toTopOf="@id/top_guideline_quarter_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_profile_layout"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/right_center"
+        app:layout_constraintStart_toStartOf="@id/right_quarter_profile_layout"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/log_out_profile"
+        android:id="@id/log_out_profile_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
         android:onClick="signOutProfile"
         android:src="@drawable/ic_logout_32"
-        app:layout_constraintBottom_toTopOf="@+id/top_guideline_72dp"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintBottom_toTopOf="@id/top_guideline_quarter_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
+        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_profile_layout"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageProfile"
+        android:id="@id/image_profile_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="@dimen/margin_32"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/image_profile"
-        app:layout_constraintEnd_toStartOf="@+id/right_center"
-        app:layout_constraintStart_toStartOf="@+id/left_center"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/personal_information_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_quarter_profile_layout"
+        app:layout_constraintStart_toStartOf="@id/left_quarter_profile_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_information"
+        android:id="@id/personal_information_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_margin="@dimen/margin_8"
         android:text="@string/personal_data"
         android:textColor="@color/light_gray"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/top_guideline_72dp"
-        app:layout_constraintEnd_toStartOf="@+id/right_center"
-        app:layout_constraintStart_toStartOf="@+id/left_center"
-        app:layout_constraintTop_toBottomOf="@+id/imageProfile" />
+        android:textSize="@dimen/calculator_text_button"
+        app:layout_constraintBottom_toTopOf="@+id/top_guideline_quarter_profile_layout"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_32dp_profile_layout"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_32dp_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/surname"
+        android:id="@id/surname_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/surname"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/name"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/name_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/vertical_center_percent_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toBottomOf="@+id/personal_information"
+        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/top_guideline_quarter_profile_layout"
         app:layout_constraintVertical_chainStyle="spread" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/name"
+        android:id="@id/name_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/name"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/patronymic"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/patronymic_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/vertical_center_percent_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toBottomOf="@+id/surname" />
+        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/surname_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/patronymic"
+        android:id="@id/patronymic_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/patronymic"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/email_edit_text"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/email_edit_text_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/vertical_center_percent_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/name_profile_layout" />
 
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/email_edit_text"
+        android:id="@id/email_edit_text_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/email"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/telephone"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/telephone_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/vertical_center_percent_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toBottomOf="@+id/patronymic" />
+        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/patronymic_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/telephone"
+        android:id="@id/telephone_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/telephone"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/status"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/status_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toBottomOf="@+id/email_edit_text" />
+        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/email_edit_text_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/status"
+        android:id="@id/status_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/status"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/name_of_firm"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/name_of_firm_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/vertical_center_percent_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toBottomOf="@+id/telephone" />
+        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/telephone_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/name_of_firm"
+        android:id="@id/name_of_firm_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/name_of_firm"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/address"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/address_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/vertical_center_percent_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toBottomOf="@+id/status" />
+        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/status_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/address"
+        android:id="@id/address_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/address"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/number_of_workers"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/number_of_workers_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/vertical_center_percent_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toBottomOf="@+id/name_of_firm" />
+        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/name_of_firm_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/number_of_workers"
+        android:id="@id/number_of_workers_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/empty_space"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/down_guideline_percent_7"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/number_of_completed_project_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/vertical_center_percent_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toBottomOf="@+id/address" />
+        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/address_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_surname"
+        android:id="@id/number_of_completed_project_profile_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_space"
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/down_guideline_top_72_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/vertical_center_percent_profile_layout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_profile_layout"
+        app:layout_constraintTop_toBottomOf="@+id/number_of_workers_profile_layout" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@id/personal_surname_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/personal_name"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/personal_name_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_information"
+        app:layout_constraintStart_toStartOf="@id/vertical_center_percent_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/top_guideline_quarter_profile_layout"
         app:layout_constraintVertical_chainStyle="spread" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_name"
+        android:id="@id/personal_name_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/personal_patronymic"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/personal_patronymic_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_surname" />
+        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/personal_surname_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_patronymic"
+        android:id="@id/personal_patronymic_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/personal_email"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/personal_email_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_name" />
+        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/personal_name_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_email"
+        android:id="@id/personal_email_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/personal_telephone"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/personal_telephone_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_patronymic" />
+        app:layout_constraintStart_toStartOf="@id/vertical_center_percent_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/personal_patronymic_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_telephone"
+        android:id="@id/personal_telephone_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/personal_status"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/personal_status_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_email" />
+        app:layout_constraintStart_toStartOf="@id/vertical_center_percent_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/personal_email_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_status"
+        android:id="@id/personal_status_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/personal_name_of_firm"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/personal_name_of_firm_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_telephone" />
+        app:layout_constraintStart_toStartOf="@id/vertical_center_percent_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/personal_telephone_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_name_of_firm"
+        android:id="@id/personal_name_of_firm_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/personal_address"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/personal_address_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_status" />
+        app:layout_constraintStart_toStartOf="@id/vertical_center_percent_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/personal_status_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_address"
+        android:id="@id/personal_address_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/personal_number_of_workers"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@id/personal_number_of_workers_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_name_of_firm" />
+        app:layout_constraintStart_toStartOf="@id/vertical_center_percent_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/personal_name_of_firm_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_number_of_workers"
+        android:id="@id/personal_number_of_workers_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/down_guideline_percent_7"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/personal_number_of_completed_project_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_address" />
+        app:layout_constraintStart_toStartOf="@id/vertical_center_percent_profile_layout"
+        app:layout_constraintTop_toBottomOf="@id/personal_address_profile_layout" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@id/personal_number_of_completed_project_profile_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/down_guideline_top_72_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_profile_layout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/vertical_center_percent_profile_layout"
+        app:layout_constraintTop_toBottomOf="@+id/personal_number_of_workers_profile_layout" />
 
     <ImageView
-        android:id="@+id/image_menu"
+        android:id="@id/image_menu_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        android:src="@drawable/ic_menu_32"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginBottom="@dimen/margin_4"
         android:onClick="menu"
-        app:layout_constraintBottom_toTopOf="@+id/down_image"
-        app:layout_constraintEnd_toStartOf="@+id/left_center"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toTopOf="@+id/down_guideline_percent_7"
+        android:src="@drawable/ic_menu_32"
+        app:layout_constraintBottom_toTopOf="@id/down_image_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/left_quarter_profile_layout"
+        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_profile_layout"
+        app:layout_constraintTop_toTopOf="@id/down_guideline_top_72_profile_layout"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/image_profile"
+        android:id="@id/image_profile_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginBottom="@dimen/margin_4"
         android:src="@drawable/ic_profile_32"
-        app:layout_constraintBottom_toTopOf="@+id/down_image"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintBottom_toTopOf="@id/down_image_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_profile_layout"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/right_center"
-        app:layout_constraintTop_toTopOf="@+id/down_guideline_percent_7"
+        app:layout_constraintStart_toStartOf="@id/right_quarter_profile_layout"
+        app:layout_constraintTop_toTopOf="@id/down_guideline_top_72_profile_layout"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/image_project"
+        android:id="@id/image_project_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        android:src="@drawable/ic_home_32"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginBottom="@dimen/margin_4"
         android:onClick="myProject"
-        app:layout_constraintBottom_toTopOf="@+id/down_image"
-        app:layout_constraintEnd_toStartOf="@+id/right_center"
-        app:layout_constraintStart_toStartOf="@+id/left_center"
-        app:layout_constraintTop_toTopOf="@+id/down_guideline_percent_7"
+        android:src="@drawable/ic_home_32"
+        app:layout_constraintBottom_toTopOf="@id/down_image_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_quarter_profile_layout"
+        app:layout_constraintStart_toStartOf="@id/left_quarter_profile_layout"
+        app:layout_constraintTop_toTopOf="@id/down_guideline_top_72_profile_layout"
         app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/menu"
+        android:id="@id/menu_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_margin="@dimen/margin_8"
+        android:onClick="menu"
         android:text="@string/menu"
         android:textColor="@color/light_gray"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        android:onClick="menu"
-        app:layout_constraintBottom_toTopOf="@+id/down_text"
-        app:layout_constraintEnd_toStartOf="@+id/left_center"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toTopOf="@+id/down_image" />
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@id/down_text_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/left_quarter_profile_layout"
+        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_profile_layout"
+        app:layout_constraintTop_toTopOf="@id/down_image_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/profile"
+        android:id="@id/profile_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_margin="@dimen/margin_8"
         android:text="@string/profile"
         android:textColor="@color/light_gray"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/down_text"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
-        app:layout_constraintStart_toStartOf="@+id/right_center"
-        app:layout_constraintTop_toTopOf="@+id/down_image" />
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@id/down_text_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_profile_layout"
+        app:layout_constraintStart_toStartOf="@id/right_quarter_profile_layout"
+        app:layout_constraintTop_toTopOf="@id/down_image_profile_layout" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/project"
+        android:id="@id/project_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_margin="@dimen/margin_8"
+        android:onClick="myProject"
         android:text="@string/my_projects"
         android:textColor="@color/light_gray"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        android:onClick="myProject"
-        app:layout_constraintBottom_toTopOf="@+id/down_text"
-        app:layout_constraintEnd_toStartOf="@+id/right_center"
-        app:layout_constraintStart_toStartOf="@+id/left_center"
-        app:layout_constraintTop_toTopOf="@+id/down_image" />
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@id/down_text_profile_layout"
+        app:layout_constraintEnd_toStartOf="@id/right_quarter_profile_layout"
+        app:layout_constraintStart_toStartOf="@id/left_quarter_profile_layout"
+        app:layout_constraintTop_toTopOf="@id/down_image_profile_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
