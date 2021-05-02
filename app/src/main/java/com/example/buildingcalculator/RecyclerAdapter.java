@@ -42,7 +42,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         return listItems.size();
     }
 
-    //что это
     public void filterList(ArrayList<RecyclerItem> filteredList) {
         listItems = filteredList;
         notifyDataSetChanged();
@@ -54,7 +53,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
         public ViewHolder(View itemView) {
             super(itemView);
-            txtTitle = itemView.findViewById(R.id.txtTitle);
+            txtTitle = itemView.findViewById(R.id.txt_title_recycler);
         }
     }
 }

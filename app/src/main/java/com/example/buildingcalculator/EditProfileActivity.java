@@ -3,18 +3,28 @@ package com.example.buildingcalculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Toast;
 
+import com.example.buildingcalculator.Authentication.ResetPasswordActivity;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.android.material.textview.MaterialTextView;
 
+import static com.example.buildingcalculator.Constants.APP_PREFERENCES_NAME;
 import static com.example.buildingcalculator.Constants.CREATE_PROFILE;
+import static com.example.buildingcalculator.Constants.EMPTY_STRING;
+import static com.example.buildingcalculator.Constants.MIN_PASSWORD_LENGTH;
+import static com.example.buildingcalculator.Constants.PREFERENCES_FLAG_REGISTRATION;
+import static com.example.buildingcalculator.Constants.PREFERENCES_ROLE;
+import static com.example.buildingcalculator.Constants.ROLE_CUSTOMER;
+import static com.example.buildingcalculator.Constants.ROLE_EXECUTOR;
 import static com.example.buildingcalculator.Constants.STATUS_INDIVIDUAL;
 import static com.example.buildingcalculator.Constants.STATUS_LEGAL_ENTITY;
 
@@ -29,6 +39,8 @@ public class EditProfileActivity extends AppCompatActivity {
     String[] status_items;
     String chooseStatus = "";
     TextInputLayout nameFirmLayout;
+    SharedPreferences sPref;
+    MaterialTextView numberOfWorkers,numberOfCompletedProjects;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +53,8 @@ public class EditProfileActivity extends AppCompatActivity {
 
         Boolean createProfile = (Boolean) arguments.get(CREATE_PROFILE);
 
-        if((arguments != null && createProfile)){
+        if(createProfile){
+
             titleTextView.setText(getString(R.string.create_profile));
         }
         else {
@@ -57,13 +70,13 @@ public class EditProfileActivity extends AppCompatActivity {
 
     public void layoutElementsInit(){
 
-        menu = findViewById(R.id.menu);
+        menu = findViewById(R.id.menu_edit_profile_layout);
         menu.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
 
-        project = findViewById(R.id.project);
+        project = findViewById(R.id.project_edit_profile_layout);
         project.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
 
-        profile = findViewById(R.id.profile);
+        profile = findViewById(R.id.profile_edit_profile_layout);
         profile.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
 
         titleTextView = findViewById(R.id.text_view_edit_profile_layout);
@@ -98,11 +111,11 @@ public class EditProfileActivity extends AppCompatActivity {
         address = findViewById(R.id.edit_address_edit_profile_layout);
         address.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_regular)));
 
-        MaterialTextView numberOfWorkers = findViewById(R.id.number_workers_edit_profile_layout);
-        numberOfWorkers.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_regular)));
+        numberOfWorkers = findViewById(R.id.number_workers_edit_profile_layout);
+        numberOfWorkers.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
 
-        MaterialTextView numberOfCompletedProjects = findViewById(R.id.enter_number_completed_projects_edit_profile_layout);
-        numberOfCompletedProjects.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_regular)));
+        numberOfCompletedProjects = findViewById(R.id.enter_number_completed_projects_edit_profile_layout);
+        numberOfCompletedProjects.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
 
     }
 
@@ -124,6 +137,65 @@ public class EditProfileActivity extends AppCompatActivity {
 
 
     public void saveProfile(View view) {
+
+       if(checkMainFields()){
+           sPref = getSharedPreferences(APP_PREFERENCES_NAME, MODE_PRIVATE);
+
+           String role = sPref.getString(PREFERENCES_ROLE,EMPTY_STRING);
+
+           if (role.equals(ROLE_CUSTOMER))
+           {
+               saveCustomer();
+
+           }else if (role.equals(ROLE_EXECUTOR))
+           {
+               saveExecutor();
+           }
+           else
+           {
+               Toast.makeText(EditProfileActivity.this, getString(R.string.save_people_error),Toast.LENGTH_SHORT).show();
+           }
+       }
+    }
+
+    private void saveExecutor() {
+
+    }
+
+    private void saveCustomer() {
+
+    }
+
+    private boolean checkMainFields() {
+
+        String nameString = name.getText().toString();
+        String surnameString = surname.getText().toString();
+        String patronymicString = patronymic.getText().toString();
+
+
+        if (!(nameString.isEmpty()) && !surnameString.isEmpty() && !(patronymicString.isEmpty()) && !(chooseStatus.isEmpty()))
+        {
+            return true;
+        }
+
+        if (name.getText().length() == 0)
+        {
+            name.requestFocus();
+            name.setError(getString(R.string.email_error));
+            return false;
+        }
+        else if (surname.getText().length() == 0)
+        {
+            surname.requestFocus();
+            surname.setError(getString(R.string.password_error));
+            return false;
+        }
+        else if (chooseStatus.length() == 0)
+        {
+            statusList.setError(getString(R.string.role_error));
+            return false;
+        }
+        return false;
 
     }
 

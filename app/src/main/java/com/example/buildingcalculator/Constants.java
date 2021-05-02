@@ -13,8 +13,9 @@ public class Constants {
     public static final String CREATE_PROFILE = "create_profile";
 
 
-
-
+    public static final String EMPTY_STRING = " ";
+    public static final String ROLE_EXECUTOR = "Исполнитель";
+    public static final String ROLE_CUSTOMER = "Заказчик";
     public static final String STATUS_LEGAL_ENTITY = "Юр.лицо";
     public static final String STATUS_INDIVIDUAL= "Физ.лицо";
     public static final String MATERIALS = "materials";
