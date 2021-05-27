@@ -1,4 +1,4 @@
-package com.example.buildingcalculator.Authentication;
+package com.example.buildingcalculator.authentication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -127,8 +127,6 @@ public class RegistrationActivity extends AppCompatActivity {
                             SharedPreferencesRole(chooseRole);
                             SharedPreferencesRegistrationFlag(false);
 
-                            sharedPreferencesCreateProfile(false);
-
                             intentCreateProfile();
                         }
                 });
@@ -176,13 +174,6 @@ public class RegistrationActivity extends AppCompatActivity {
         intent.putExtra(CREATE_PROFILE, true);
         startActivity(intent);
         finish();
-    }
-
-    public void sharedPreferencesCreateProfile(boolean createProfile){
-
-        editor = sPref.edit();
-        editor.putBoolean(PROFILE_IS_COMPLETED, createProfile);
-        editor.apply();
     }
 
     @Override

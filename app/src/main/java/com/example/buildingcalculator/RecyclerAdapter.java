@@ -10,17 +10,26 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.buildingcalculator.roomDataBase.Project;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
     private ArrayList<RecyclerItem> listItems;
     private Context mContext;
-
-    public RecyclerAdapter(ArrayList<RecyclerItem> listItems, Context mContext) {
-        this.listItems = listItems;
-        this.mContext = mContext;
+    private final LayoutInflater inflater;
+    interface OnStateClickListener{
+        void onStateClick(RecyclerItem state, int position);
     }
+    private final OnStateClickListener onClickListener;
+
+    public RecyclerAdapter(ArrayList<RecyclerItem> listItems, Context mContext,OnStateClickListener onClickListener) {
+        this.listItems = listItems;
+        this.onClickListener = onClickListener;
+        this.inflater = LayoutInflater.from(mContext);
+    }
+
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -34,6 +43,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
         final RecyclerItem itemList = listItems.get(position);
         holder.txtTitle.setText(itemList.getTitle());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v)
+            {
+                onClickListener.onStateClick(itemList, position);
+            }
+        });
 
     }
 

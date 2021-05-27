@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".Authentication.LogInActivity">
+    tools:context=".authentication.LogInActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@id/left_guideline_24dp_log_in_layout"
@@ -65,7 +65,7 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@id/registration_text_view_log_in_layout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/guideline_48dp"
         android:layout_margin="@dimen/margin_8"
         android:onClick="registration"
         android:text="@string/registration"
@@ -132,7 +132,7 @@
             app:boxStrokeWidthFocused="@dimen/box_stroke_width_focus"
             app:boxStrokeColor="@color/box"
             app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/light_gray"
+            app:passwordToggleTint="@color/box"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -140,6 +140,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/password"
+                android:textColorHint="@color/box"
                 android:inputType="textPassword"
                 android:textColorLink="@color/box_stroke" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -173,7 +174,7 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@id/forgot_password_text_view_log_in_layout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/guideline_48dp"
         android:layout_marginTop="@dimen/margin_8"
         android:layout_marginBottom="@dimen/margin_8"
         android:gravity="center_horizontal"
@@ -189,7 +190,7 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@id/without_registration_text_view_log_in_layout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/guideline_48dp"
         android:layout_marginTop="@dimen/margin_8"
         android:layout_marginBottom="@dimen/margin_16"
         android:gravity="center|center_horizontal"

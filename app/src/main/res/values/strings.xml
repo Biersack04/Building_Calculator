@@ -79,7 +79,7 @@
     <string name="name">Имя</string>
     <string name="patronymic">Отчество</string>
     <string name="telephone">Телефон</string>
-    <string name="status">Статус</string>
+    <string name="legalStatus">Статус</string>
     <string name="name_of_firm">Название фирмы</string>
     <string name="address">Адрес</string>
     <string name="qty_of_workers">Кол-во работников</string>
@@ -104,6 +104,12 @@
     <string-array name="status_items">
         <item>Юр.лицо</item>
         <item>Физ.лицо</item>
+    </string-array>
+
+    <string-array name="units">
+        <item>М2</item>
+        <item>СМ2</item>
+        <item>ШТ</item>
     </string-array>
 
 
@@ -131,6 +137,7 @@
     <string name="enter_qty_of_workers">Введите кол-во работников</string>
     <string name="qty_of_works">Кол-во работ</string>
     <string name="enter_date_of_create">Введите дату создания</string>
+    <string name="enter_date_of_end">Введите дату окончания</string>
     <string name="date_of_create">Дата создания</string>
     <string name="add_work">работа</string>
     <string name="add_customer">заказчик</string>
@@ -141,6 +148,25 @@
     <string name="list_of_works">Список работ</string>
     <string name="list_of_materials">Список материалов</string>
 
+    <string name="create_project">Создание проекта</string>
+    <string name="edit_project">Редактирование проекта</string>
+    <string name="status">Статус</string>
+    <string name="total_project_price">Общая стоимость проекта</string>
+    <string name="end_date">Дата окончания</string>
+    <string name="create_report">Создать отчет</string>
+    <string name="number_of_materials">Количество материалов</string>
 
+    <string name="report_about_materials">Отчет по материалам</string>
+    <string name="file_extension">.xls</string>
+    <string name="space">\"  \"</string>
+    <string name="word_work_in_order">\"работа - \"</string>
+    <string-array name="material_report">
+        <item>Название</item>
+        <item>Кол-во</item>
+        <item>Цена за ед.</item>
+        <item>Ед. измерения</item>
+        <item>Итоговая стоимость</item>
+        <item>Итого:</item>
+    </string-array>
 
 </resources>

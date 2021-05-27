@@ -230,7 +230,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/units_input"
+        android:id="@+id/units_input_layout"
         style="@style/ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -280,6 +280,7 @@
         android:textSize="14sp"
         app:cornerRadius="10dp"
         app:elevation="5dp"
+        android:onClick="saveMaterial"
         app:layout_constraintBottom_toTopOf="@+id/down_guideline_percent_7"
         app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
         app:layout_constraintStart_toStartOf="@+id/left_min"

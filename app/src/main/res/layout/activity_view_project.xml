@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -75,7 +74,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_information"
+        android:id="@+id/information_about_project"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -83,143 +82,216 @@
         android:textColor="@color/light_gray"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/top_guideline_72dp"
         app:layout_constraintEnd_toStartOf="@+id/right_center"
         app:layout_constraintStart_toStartOf="@+id/left_center"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/surname"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/title"
         android:textColor="@color/light_gray"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintBottom_toTopOf="@+id/number_of_works"
         app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toBottomOf="@+id/personal_information"
+        app:layout_constraintTop_toBottomOf="@+id/information_about_project"
+        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintVertical_chainStyle="spread" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/qty_of_workers"
-        android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/patronymic"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toBottomOf="@+id/surname" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/patronymic"
+        android:id="@+id/number_of_works"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/qty_of_works"
         android:textColor="@color/light_gray"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/email_edit_text"
+        app:layout_constraintBottom_toTopOf="@+id/number_of_materials"
         app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/email_edit_text"
+        android:id="@+id/number_of_materials"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/number_of_materials"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/date_create"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
+        app:layout_constraintTop_toBottomOf="@+id/number_of_works" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/date_create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/date_of_create"
         android:textColor="@color/light_gray"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/telephone"
+        app:layout_constraintBottom_toTopOf="@+id/customer"
         app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toBottomOf="@+id/patronymic" />
+        app:layout_constraintTop_toBottomOf="@+id/number_of_materials" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/telephone"
+        android:id="@+id/customer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/customer"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/legalStatus"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
+        app:layout_constraintTop_toBottomOf="@+id/date_create" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/legalStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address"
         android:textColor="@color/light_gray"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/status"
         app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toBottomOf="@+id/email_edit_text" />
+        app:layout_constraintTop_toBottomOf="@+id/customer" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/address"
+        android:text="@string/status"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/total_price"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
+        app:layout_constraintTop_toBottomOf="@+id/legalStatus" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_project_price"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/end_date"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
+        app:layout_constraintTop_toBottomOf="@+id/status" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/end_date"
         android:textColor="@color/light_gray"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/look_list_of_works"
         app:layout_constraintEnd_toStartOf="@+id/vertical_center_percent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
-        app:layout_constraintTop_toBottomOf="@+id/telephone" />
+        app:layout_constraintTop_toBottomOf="@+id/total_price" />
+
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_surname"
+        android:id="@+id/personal_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:textColor="@color/light_gray"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/personal_name"
+        app:layout_constraintBottom_toTopOf="@+id/personal_number_of_works"
         app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_information"
+        app:layout_constraintTop_toBottomOf="@+id/information_about_project"
+        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintVertical_chainStyle="spread" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_name"
+        android:id="@+id/personal_number_of_works"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="lookCustomerProfile"
+        android:text=""
+        android:textColor="@color/light_gray"
+
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/personal_number_of_materials"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
+        app:layout_constraintTop_toBottomOf="@+id/personal_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/personal_number_of_materials"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/personal_create_date"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
+        app:layout_constraintTop_toBottomOf="@+id/personal_number_of_works" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/personal_create_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/personal_customer"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
+        app:layout_constraintTop_toBottomOf="@+id/personal_number_of_materials" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/personal_customer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/light_gray"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/personal_patronymic"
+        android:text="Посмотреть профиль"
+        app:layout_constraintBottom_toTopOf="@+id/personal_address"
         app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_surname" />
+        app:layout_constraintTop_toBottomOf="@+id/personal_create_date" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_patronymic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/personal_email"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_name" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/personal_telephone"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_patronymic" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/personal_telephone"
+        android:id="@+id/personal_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/light_gray"
@@ -228,20 +300,55 @@
         app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_email" />
+        app:layout_constraintTop_toBottomOf="@+id/personal_customer" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/personal_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/personal_total_price"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
+        app:layout_constraintTop_toBottomOf="@+id/personal_address" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/personal_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/personal_end_date"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
+        app:layout_constraintTop_toBottomOf="@+id/personal_status" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/personal_end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:textColor="@color/light_gray"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/look_list_of_works"
         app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/vertical_center_percent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_telephone" />
+        app:layout_constraintTop_toBottomOf="@+id/personal_total_price" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/look_list_of_works"
@@ -289,6 +396,37 @@
         app:layout_constraintBottom_toTopOf="@+id/down_guideline_percent_7"
         app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
         app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
+        app:strokeColor="@color/light_gray"
+        app:strokeWidth="3dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/create_report_about_project"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:onClick="createReport"
+        android:paddingLeft="16dp"
+        android:paddingTop="11dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="11dp"
+        android:shadowDx="2"
+        android:shadowDy="5"
+        android:text="@string/create_report"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp"
+        app:cornerRadius="10dp"
+        app:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline_24dp"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_24dp"
+        app:layout_constraintTop_toBottomOf="@+id/look_list_of_materials"
         app:strokeColor="@color/light_gray"
         app:strokeWidth="3dp" />
 

@@ -112,17 +112,15 @@
 
 
     <!-- edit_profile-->
-    <item name="down_guideline_72dp_edit_profile_layout" type="id" />
     <item name="right_quarter_edit_profile_layout" type="id" />
     <item name="top_guideline_24dp_edit_profile_layout" type="id" />
     <item name="left_quarter_edit_profile_layout" type="id" />
-    <item name="down_guideline_text_edit_profile_layout" type="id" />
     <item name="down_guideline_image_edit_profile_layout" type="id" />
     <item name="left_guideline_32dp_edit_profile_layout" type="id" />
     <item name="right_guideline_32dp_edit_profile_layout" type="id" />
 
-    <item name="image_edit_edit_profile_layout" type="id" />
     <item name="image_back_arrow_edit_profile_layout" type="id" />
+    <item name="image_edit_edit_profile_layout" type="id" />
     <item name="text_view_edit_profile_layout" type="id" />
     <item name="surname_layout_edit_profile_layout" type="id" />
     <item name="edit_surname_edit_profile_layout" type="id" />
@@ -141,17 +139,11 @@
     <item name="edit_address_edit_profile_layout" type="id" />
     <item name="address_layout_edit_profile_layout" type="id" />
     <item name="number_workers_edit_profile_layout" type="id" />
-    <item name="enter_number_completed_projects_edit_profile_layout" type="id" />
     <item name="edit_number_of_workers_edit_profile_layout" type="id" />
-    <item name="edit_number_of_completed_projects_edit_profile_layout" type="id" />
-    <item name="image_menu_edit_profile_layout" type="id" />
-    <item name="image_project_edit_profile_layout" type="id" />
-    <item name="image_profile_edit_profile_layout" type="id" />
 
 
-    <item name="menu_edit_profile_layout" type="id" />
-    <item name="project_edit_profile_layout" type="id" />
-    <item name="profile_edit_profile_layout" type="id" />
+
+
     <item name="log_out_profile_profile_layout" type="id" />
     <item name="image_profile_profile_layout" type="id" />
     <item name="personal_information_profile_layout" type="id" />
@@ -180,6 +172,22 @@
     <item name="personal_status_profile_layout" type="id" />
     <item name="number_of_completed_project_profile_layout" type="id" />
     <item name="personal_number_of_completed_project_profile_layout" type="id" />
+    <item name="title_text_view_add_project_layout" type="id" />
+    <item name="add_customer_add_project_layout" type="id" />
+    <item name="add_work_add_project_layout" type="id" />
+    <item name="title_add_project_layout" type="id" />
+    <item name="edit_title_add_project_layout" type="id" />
+    <item name="address_layout_add_project_layout" type="id" />
+    <item name="edit_address_add_project_layout" type="id" />
+    <item name="create_date_layout_add_project_layout" type="id" />
+    <item name="edit_create_date_add_project_layout" type="id" />
+    <item name="status_item_add_project_layout" type="id" />
+    <item name="status_input_add_project_layout" type="id" />
+    <item name="end_date_layout_add_project_layout" type="id" />
+    <item name="edit_end_date_add_project_layout" type="id" />
+    <item name="save_project_add_project_layout" type="id" />
+    <item name="delete_project" type="id" />
+    <item name="delete_project_add_project_layout" type="id" />
 
 
     ----

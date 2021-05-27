@@ -9,13 +9,6 @@
     tools:context=".EditProfileActivity">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@id/down_guideline_72dp_edit_profile_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="@dimen/guideline_72dp" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@id/right_quarter_edit_profile_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,13 +28,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.25" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@id/down_guideline_text_edit_profile_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="@dimen/guideline_16dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@id/down_guideline_image_edit_profile_layout"
@@ -138,10 +124,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/LoginTextInputLayoutStyle"
         android:id="@id/name_layout_edit_profile_layout"
+        style="@style/LoginTextInputLayoutStyle"
         android:layout_width="@dimen/zero_value"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
         android:textColorHint="@color/white"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
@@ -160,17 +147,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/enter_name"
-            android:inputType="textPersonName"
+            android:inputType="textCapWords"
             android:singleLine="false"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/LoginTextInputLayoutStyle"
         android:id="@id/patronymic_layout_edit_profile_layout"
+        style="@style/LoginTextInputLayoutStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
         android:textColorHint="@color/white"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
@@ -189,7 +177,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/enter_patronymic"
-            android:inputType="textPersonName"
+            android:inputType="textCapWords"
             android:singleLine="false"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
@@ -199,6 +187,7 @@
         style="@style/LoginTextInputLayoutStyle"
         android:id="@id/email_layout_edit_profile_layout"
         android:layout_width="@dimen/zero_value"
+        android:layout_marginTop="@dimen/margin_8"
         android:layout_height="wrap_content"
         android:textColorHint="@color/white"
         app:boxBackgroundMode="outline"
@@ -218,7 +207,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/enter_email"
-            android:inputType="textCapWords"
+            android:inputType="textEmailAddress"
             android:singleLine="false"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
@@ -228,6 +217,7 @@
         style="@style/LoginTextInputLayoutStyle"
         android:id="@id/telephone_layout_edit_profile_layout"
         android:layout_width="@dimen/zero_value"
+        android:layout_marginTop="@dimen/margin_8"
         android:layout_height="wrap_content"
         android:textColorHint="@color/white"
         app:boxBackgroundMode="outline"
@@ -247,7 +237,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/enter_telephone"
-            android:inputType="text"
+            android:inputType="number"
             android:singleLine="false"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
@@ -259,6 +249,8 @@
         android:layout_width="@dimen/zero_value"
         android:layout_height="wrap_content"
         android:hint="@string/enter_status"
+        android:layout_marginTop="@dimen/margin_8"
+        android:textColor="@color/light_gray"
         app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
         app:boxCornerRadiusBottomStart="@dimen/corner_radius"
         app:boxCornerRadiusTopEnd="@dimen/corner_radius"
@@ -266,6 +258,7 @@
         app:boxStrokeWidth="@dimen/box_stroke_width"
         app:boxStrokeWidthFocused="@dimen/box_stroke_width_focus"
         app:endIconTint="@color/light_gray"
+        app:hintTextColor="@color/light_gray"
         app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_edit_profile_layout"
         app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_edit_profile_layout"
         app:layout_constraintTop_toBottomOf="@id/telephone_layout_edit_profile_layout">
@@ -275,6 +268,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
+            android:textColor="@color/light_gray"
             tools:ignore="LabelFor" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -283,6 +277,7 @@
         style="@style/LoginTextInputLayoutStyle"
         android:id="@id/name_of_firm_layout_edit_profile_layout"
         android:layout_width="@dimen/zero_value"
+        android:layout_marginTop="@dimen/margin_8"
         android:layout_height="wrap_content"
         android:textColorHint="@color/white"
         app:boxBackgroundMode="outline"
@@ -316,6 +311,7 @@
         android:layout_height="wrap_content"
         android:textColorHint="@color/white"
         app:boxBackgroundMode="outline"
+        android:layout_marginTop="@dimen/margin_8"
         app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
         app:boxCornerRadiusBottomStart="@dimen/corner_radius"
         app:boxCornerRadiusTopEnd="@dimen/corner_radius"
@@ -332,7 +328,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/enter_address"
-            android:inputType="textShortMessage"
+            android:inputType="textCapWords"
             android:singleLine="false"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
@@ -350,15 +346,16 @@
         android:text="@string/enter_qty_workers"
         android:textColor="@color/light_gray"
         android:textSize="@dimen/button_text_size"
-        app:layout_constraintBottom_toTopOf="@+id/down_guideline_72dp_edit_profile_layout"
+        app:layout_constraintBottom_toTopOf="@+id/down_guideline_image_edit_profile_layout"
         app:layout_constraintEnd_toStartOf="@id/right_quarter_edit_profile_layout"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_edit_profile_layout"
         app:layout_constraintTop_toBottomOf="@id/address_layout_edit_profile_layout"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <EditText
-        android:id="@id/edit_number_of_completed_projects_edit_profile_layout"
+        android:id="@id/edit_number_of_workers_edit_profile_layout"
         android:layout_width="@dimen/zero_value"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -370,93 +367,12 @@
         android:ems="@integer/ems"
         android:gravity="center_horizontal"
         android:inputType="numberSigned"
-        app:layout_constraintBottom_toTopOf="@+id/down_guideline_72dp_edit_profile_layout"
+        android:textColor="@color/light_gray"
+        app:layout_constraintBottom_toTopOf="@+id/down_guideline_image_edit_profile_layout"
         app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_edit_profile_layout"
         app:layout_constraintStart_toStartOf="@+id/right_quarter_edit_profile_layout"
         app:layout_constraintTop_toBottomOf="@id/address_layout_edit_profile_layout"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@id/image_menu_edit_profile_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_4"
-        android:layout_marginBottom="@dimen/margin_4"
-        android:src="@drawable/ic_menu_32"
-        android:onClick="menu"
-        app:layout_constraintBottom_toTopOf="@id/down_guideline_image_edit_profile_layout"
-        app:layout_constraintEnd_toStartOf="@id/left_quarter_edit_profile_layout"
-        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_edit_profile_layout"
-        app:layout_constraintTop_toTopOf="@id/down_guideline_72dp_edit_profile_layout"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@id/image_project_edit_profile_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_4"
-        android:layout_marginBottom="@dimen/margin_4"
-        android:src="@drawable/ic_home_32"
-        android:onClick="project"
-        app:layout_constraintBottom_toTopOf="@id/down_guideline_image_edit_profile_layout"
-        app:layout_constraintEnd_toStartOf="@id/right_quarter_edit_profile_layout"
-        app:layout_constraintStart_toStartOf="@id/left_quarter_edit_profile_layout"
-        app:layout_constraintTop_toTopOf="@id/down_guideline_72dp_edit_profile_layout"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@id/image_profile_edit_profile_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_4"
-        android:layout_marginBottom="@dimen/margin_4"
-        android:src="@drawable/ic_profile_32"
-        app:layout_constraintBottom_toTopOf="@id/down_guideline_image_edit_profile_layout"
-        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_edit_profile_layout"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/right_quarter_edit_profile_layout"
-        app:layout_constraintTop_toTopOf="@id/down_guideline_72dp_edit_profile_layout"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@id/menu_edit_profile_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_8"
-        android:text="@string/menu"
-        android:textColor="@color/light_gray"
-        android:textSize="@dimen/text_size"
-        android:onClick="menu"
-        app:layout_constraintBottom_toTopOf="@id/down_guideline_text_edit_profile_layout"
-        app:layout_constraintEnd_toStartOf="@id/left_quarter_edit_profile_layout"
-        app:layout_constraintStart_toStartOf="@id/left_guideline_32dp_edit_profile_layout"
-        app:layout_constraintTop_toTopOf="@id/down_guideline_image_edit_profile_layout" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@id/project_edit_profile_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin ="@dimen/margin_8"
-        android:text="@string/my_projects"
-        android:textColor="@color/light_gray"
-        android:textSize="@dimen/text_size"
-        android:onClick="project"
-        app:layout_constraintBottom_toTopOf="@id/down_guideline_text_edit_profile_layout"
-        app:layout_constraintEnd_toStartOf="@id/right_quarter_edit_profile_layout"
-        app:layout_constraintStart_toStartOf="@id/left_quarter_edit_profile_layout"
-        app:layout_constraintTop_toTopOf="@id/down_guideline_image_edit_profile_layout" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@id/profile_edit_profile_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin ="@dimen/margin_8"
-        android:text="@string/profile"
-        android:textColor="@color/light_gray"
-        android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@id/down_guideline_text_edit_profile_layout"
-        app:layout_constraintEnd_toStartOf="@id/right_guideline_32dp_edit_profile_layout"
-        app:layout_constraintStart_toStartOf="@id/right_quarter_edit_profile_layout"
-        app:layout_constraintTop_toTopOf="@id/down_guideline_image_edit_profile_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

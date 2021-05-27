@@ -1,4 +1,4 @@
-package com.example.buildingcalculator.Authentication;
+package com.example.buildingcalculator.authentication;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -46,6 +47,7 @@ public class LogInActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         if (auth.getCurrentUser() != null)
         {
+            Log.e("AUTH", String.valueOf(auth));
             intent = new Intent(this, MainMenuActivity.class);
             startActivity(intent);
             finish();

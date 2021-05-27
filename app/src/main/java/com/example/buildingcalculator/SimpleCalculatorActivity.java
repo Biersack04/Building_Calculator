@@ -89,6 +89,12 @@ public class SimpleCalculatorActivity extends AppCompatActivity {
         {
             resultsTextView.setText(String.valueOf(result.doubleValue()));
         }
+
+
+        if (enterTextView.getText().equals(""))
+        {
+            Toast.makeText(this, "Empty Value", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void checkForPowerOf() {

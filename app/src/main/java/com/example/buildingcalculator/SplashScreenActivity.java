@@ -6,7 +6,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.buildingcalculator.Authentication.LogInActivity;
+import com.example.buildingcalculator.authentication.LogInActivity;
 import com.google.android.material.textview.MaterialTextView;
 
 import static com.example.buildingcalculator.Constants.SPLASH_DISPLAY_LENGTH;

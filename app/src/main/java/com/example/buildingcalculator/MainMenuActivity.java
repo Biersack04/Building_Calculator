@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.buildingcalculator.Authentication.RegistrationActivity;
+import com.example.buildingcalculator.authentication.RegistrationActivity;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
 
@@ -120,6 +120,9 @@ public class MainMenuActivity extends AppCompatActivity {
 
         intent = new Intent(this, MyProjectsListActivity.class);
         startActivity(intent);
+/*
+        intent = new Intent(this, MainActivity.class);
+        startActivity(intent);*/
     }
 
     @Override

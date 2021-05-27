@@ -1,4 +1,4 @@
-package com.example.buildingcalculator.Authentication;
+package com.example.buildingcalculator.authentication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -40,7 +40,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
         buttonResetPassword = findViewById(R.id.button_reset_password_reset_password_layout);
         buttonResetPassword.setTypeface(Typeface.createFromAsset(getAssets(),getString(R.string.roboto_medium)));
-        inputEmail = findViewById(R.id.email_edit_text);
+        inputEmail = findViewById(R.id.email_edit_text_reset_password_layout);
 
     }
 

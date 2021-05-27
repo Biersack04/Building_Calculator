@@ -4,14 +4,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.buildingcalculator.roomDataBase.Project;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import io.reactivex.functions.Consumer;
 
 import static com.example.buildingcalculator.Constants.ACTIVITY_SELECTION;
 import static com.example.buildingcalculator.Constants.MATERIALS;
@@ -24,6 +32,8 @@ public class CategoryOfWorksOrMaterialsActivity extends AppCompatActivity {
     String activitySelection;
     TextView calculationOfWorksOrMaterials;
     EditText editText;
+    Intent intent;
+    ArrayList<RecyclerItem> projects = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +60,46 @@ public class CategoryOfWorksOrMaterialsActivity extends AppCompatActivity {
         }
 
         createExampleList();
-        buildRecyclerView();
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        RecyclerAdapter.OnStateClickListener stateClickListener = new RecyclerAdapter.OnStateClickListener() {
+            @Override
+            public void onStateClick(RecyclerItem project, int position) {
+
+                Toast.makeText(getApplicationContext(), "Был выбран пункт " + project.getTitle(),
+                        Toast.LENGTH_SHORT).show();
+
+                /*Пока только для стен*/
+                if (project.getTitle().equals("Стены")){
+                    if (activitySelection.equals(MATERIALS)){
+
+                        intent = new Intent(getApplicationContext(), ChooseOfWorksActivity.class);
+                        intent.putExtra(ACTIVITY_SELECTION,MATERIALS);
+                        startActivity(intent);
+                    } else if(activitySelection.equals(WORKS)){
+                        intent = new Intent(getApplicationContext(), ChooseOfWorksActivity.class);
+                        intent.putExtra(ACTIVITY_SELECTION,WORKS);
+                        startActivity(intent);
+                    }
+
+
+                }
+
+
+/*
+                intent = new Intent(getApplicationContext(), ViewProjectActivity.class);
+                intent.putExtra("nameOfProject",project.getName());
+                startActivity(intent);*/
+                //Log.e("ProjectID",project.getId().toString());
+            }
+        };
+        // создаем адаптер
+        adapter = new RecyclerAdapter(listItems,this, stateClickListener);
+        // устанавливаем для списка адаптер
+        recyclerView.setAdapter(adapter);
+
+     //   buildRecyclerView();
 
 
         editText.addTextChangedListener(new TextWatcher() {
@@ -66,6 +115,7 @@ public class CategoryOfWorksOrMaterialsActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+
                 filter(s.toString());
             }
         });
@@ -85,9 +135,8 @@ public class CategoryOfWorksOrMaterialsActivity extends AppCompatActivity {
     }
 
 
-
+/*
     private void buildRecyclerView() {
-
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -96,7 +145,7 @@ public class CategoryOfWorksOrMaterialsActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
     }
-
+*/
     private void createExampleList() {
         listItems = new ArrayList<>();
         //Generate sample data

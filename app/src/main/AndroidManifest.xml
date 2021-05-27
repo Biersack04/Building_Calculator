@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.buildingcalculator">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,16 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
+        android:name=".roomDataBase.AppDelegate"
         android:theme="@style/Theme.BuildingCalculator">
         <activity android:name=".AddCustomerActivity" />
+        <activity android:name=".ChooseOfWorksActivity" />
         <activity android:name=".ViewProjectActivity" />
         <activity android:name=".AddProjectActivity" />
         <activity android:name=".AddMaterialsActivity" />
         <activity android:name=".ListOfMaterialsActivity" />
-        <activity android:name=".TotalPriceOfMaterialActivity" />
         <activity android:name=".CalculationOfWorkActivity" />
         <activity android:name=".CategoryOfWorksOrMaterialsActivity" />
         <activity android:name=".MyProjectsListActivity" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".EditProfileActivity"
             android:screenOrientation="portrait" />
@@ -26,7 +31,7 @@
             android:name=".SimpleCalculatorActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Authentication.ResetPasswordActivity"
+            android:name=".authentication.ResetPasswordActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ProfileActivity"
@@ -35,7 +40,7 @@
             android:name=".MainMenuActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Authentication.RegistrationActivity"
+            android:name=".authentication.RegistrationActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".SplashScreenActivity"
@@ -47,7 +52,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Authentication.LogInActivity"
+            android:name=".authentication.LogInActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
